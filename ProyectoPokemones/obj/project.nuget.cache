@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "TW3FrRtJCSv9faSnJn26ErWKFfn91X/aRJ17r1rK2m+mJwN7qT5n0ZBjKkWtjXRnRJNsGBroSGs8iCIIZ9UJjw==",
+  "dgSpecHash": "mvHWaErRspA=",
   "success": true,
-  "projectFilePath": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/ProyectoPokemones/ProyectoPokemones.csproj",
+  "projectFilePath": "/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/ProyectoPokemones/ProyectoPokemones.csproj",
   "expectedPackageFiles": [
-    "/Users/mateo/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "/Users/mateo/.nuget/packages/netstandard.library/2.0.0/netstandard.library.2.0.0.nupkg.sha512",
-    "/Users/mateo/.nuget/packages/nunit/3.13.2/nunit.3.13.2.nupkg.sha512",
-    "/Users/mateo/.nuget/packages/nunit3testadapter/4.2.0/nunit3testadapter.4.2.0.nupkg.sha512"
+    "/Users/eugeniaguibernau/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/Users/eugeniaguibernau/.nuget/packages/netstandard.library/2.0.0/netstandard.library.2.0.0.nupkg.sha512",
+    "/Users/eugeniaguibernau/.nuget/packages/nunit/3.13.2/nunit.3.13.2.nupkg.sha512",
+    "/Users/eugeniaguibernau/.nuget/packages/nunit3testadapter/4.2.0/nunit3testadapter.4.2.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mateo/UCU/PII/pii_2024_2_equipo5/ProyectoPokemones/ProyectoPokemones.csproj": {}
+    "/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/ProyectoPokemones/ProyectoPokemones.csproj": {}
   },
   "projects": {
-    "/Users/mateo/UCU/PII/pii_2024_2_equipo5/ProyectoPokemones/ProyectoPokemones.csproj": {
+    "/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/ProyectoPokemones/ProyectoPokemones.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/ProyectoPokemones/ProyectoPokemones.csproj",
+        "projectUniqueName": "/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/ProyectoPokemones/ProyectoPokemones.csproj",
         "projectName": "ProyectoPokemones",
-        "projectPath": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/ProyectoPokemones/ProyectoPokemones.csproj",
-        "packagesPath": "/Users/mateo/.nuget/packages/",
-        "outputPath": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/ProyectoPokemones/obj/",
+        "projectPath": "/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/ProyectoPokemones/ProyectoPokemones.csproj",
+        "packagesPath": "/Users/eugeniaguibernau/.nuget/packages/",
+        "outputPath": "/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/ProyectoPokemones/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/mateo/.nuget/NuGet/NuGet.Config"
+          "/Users/eugeniaguibernau/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,6 +32,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
