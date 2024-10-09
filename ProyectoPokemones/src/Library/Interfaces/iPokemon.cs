@@ -1,4 +1,6 @@
 namespace DefaultNamespace;
+using System;
+using System.Collections.Generic;
 
 public interface iPokemon
 {
@@ -14,5 +16,4 @@ public interface iPokemon
     List<iMovimiento> Movimientos { get; set; }
     void RecibirDanio(int dañoRecibido);
     void UsarMovimiento(iMovimiento movimiento);
-
 }
