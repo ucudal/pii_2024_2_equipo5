@@ -27,19 +27,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/eugeniaguibernau/.nuget/packages/": {}
+    "/Users/mateo/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/eugeniaguibernau/Desktop/programacion2/PII_ProjectTemplate/src/Program/Program.csproj",
+      "projectUniqueName": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/src/Program/Program.csproj",
       "projectName": "Program",
-      "projectPath": "/Users/eugeniaguibernau/Desktop/programacion2/PII_ProjectTemplate/src/Program/Program.csproj",
-      "packagesPath": "/Users/eugeniaguibernau/.nuget/packages/",
-      "outputPath": "/Users/eugeniaguibernau/Desktop/programacion2/PII_ProjectTemplate/src/Program/obj/",
+      "projectPath": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/src/Program/Program.csproj",
+      "packagesPath": "/Users/mateo/.nuget/packages/",
+      "outputPath": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/src/Program/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/eugeniaguibernau/.nuget/NuGet/NuGet.Config"
+        "/Users/mateo/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -51,8 +51,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "/Users/eugeniaguibernau/Desktop/programacion2/PII_ProjectTemplate/src/Library/Library.csproj": {
-              "projectPath": "/Users/eugeniaguibernau/Desktop/programacion2/PII_ProjectTemplate/src/Library/Library.csproj"
+            "/Users/mateo/UCU/PII/pii_2024_2_equipo5/src/Library/Library.csproj": {
+              "projectPath": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/src/Library/Library.csproj"
             }
           }
         }
