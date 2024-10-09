@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mateo/UCU/PII/pii_2024_2_equipo5/test/LibraryTests/LibraryTests.csproj": {}
+    "/Users/mateo/UCU/PII/pii_2024_2_equipo5/Proyecto/Proyecto.csproj": {}
   },
   "projects": {
-    "/Users/mateo/UCU/PII/pii_2024_2_equipo5/test/LibraryTests/LibraryTests.csproj": {
+    "/Users/mateo/UCU/PII/pii_2024_2_equipo5/Proyecto/Proyecto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/test/LibraryTests/LibraryTests.csproj",
-        "projectName": "LibraryTests",
-        "projectPath": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/test/LibraryTests/LibraryTests.csproj",
+        "projectUniqueName": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/Proyecto/Proyecto.csproj",
+        "projectName": "Proyecto",
+        "projectPath": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/Proyecto/Proyecto.csproj",
         "packagesPath": "/Users/mateo/.nuget/packages/",
-        "outputPath": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/test/LibraryTests/obj/",
+        "outputPath": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/Proyecto/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mateo/.nuget/NuGet/NuGet.Config"
@@ -37,26 +37,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.NET.Test.Sdk": {
-              "target": "Package",
-              "version": "[17.11.1, )"
-            },
-            "NUnit": {
-              "target": "Package",
-              "version": "[4.2.2, )"
-            },
-            "NUnit3TestAdapter": {
-              "target": "Package",
-              "version": "[4.6.0, )"
-            },
-            "coverlet.msbuild": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[6.0.2, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",

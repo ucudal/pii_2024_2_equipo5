@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/src/Program/Program.csproj",
-      "projectName": "Program",
-      "projectPath": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/src/Program/Program.csproj",
+      "projectUniqueName": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/Proyecto/Proyecto.csproj",
+      "projectName": "Proyecto",
+      "projectPath": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/Proyecto/Proyecto.csproj",
       "packagesPath": "/Users/mateo/.nuget/packages/",
-      "outputPath": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/src/Program/obj/",
+      "outputPath": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/Proyecto/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/mateo/.nuget/NuGet/NuGet.Config"
