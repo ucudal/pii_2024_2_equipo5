@@ -5,7 +5,7 @@ using Library.Movimientos.Normal;
 
 namespace Library.Pokemones;
 
-public class Sylveon
+public class Sylveon : IPokemon
 {
     public string Nombre { get; set; }
     public int SaludTotal { get; set; }

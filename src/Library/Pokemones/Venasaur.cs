@@ -6,7 +6,7 @@ using Library.Movimientos.Veneno;
 
 namespace Library.Pokemones;
 
-public class Venasaur
+public class Venasaur : IPokemon
 {
     public string Nombre { get; set; }
     public int SaludTotal { get; set; }

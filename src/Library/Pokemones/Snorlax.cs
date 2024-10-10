@@ -4,7 +4,7 @@ using Library.Movimientos.Normal;
 
 namespace Library.Pokemones;
 
-public class Snorlax
+public class Snorlax : IPokemon
 {
     public string Nombre { get; set; }
     public int SaludTotal { get; set; }

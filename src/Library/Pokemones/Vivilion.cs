@@ -6,7 +6,7 @@ using Library.Movimientos.Psiquico;
 
 namespace Library.Pokemones;
 
-public class Vivilion
+public class Vivilion : IPokemon
 {
     public string Nombre { get; set; }
     public int SaludTotal { get; set; }
