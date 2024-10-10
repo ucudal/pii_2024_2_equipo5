@@ -6,7 +6,7 @@ using Library.Movimientos.Volador;
 
 namespace Library.Pokemones;
 
-public class Charizard: IPokemon
+public class Charizard : IPokemon
 {
     public string Nombre { get; set; }
     public int SaludTotal { get; set; }
@@ -18,11 +18,11 @@ public class Charizard: IPokemon
     public List<IMovimiento> Movimientos { get; set; }
     public List<ETipos> Tipo { get; set; }
 
-    
+
     public Charizard()
     {
         Nombre = "Charizard";
-        
+
         SaludTotal = 130;
         SaludActual = SaludTotal;
 
@@ -32,9 +32,8 @@ public class Charizard: IPokemon
         ValorDefensaEspecial = 50;
         Debil = false;
 
-        Movimientos = new List<IMovimiento>{ new Lanzallamas(), new Vuelo(), new GarraDragon(), new PulsoDragon() };
+        Movimientos = new List<IMovimiento> { new Lanzallamas(), new Vuelo(), new GarraDragon(), new PulsoDragon() };
         Tipo = new List<ETipos> { ETipos.FUEGO, ETipos.VOLADOR };
-
     }
 
     public void RecibirDanio(int danio)
@@ -55,7 +54,6 @@ public class Charizard: IPokemon
         if (MovimientoUtilizado != null)
         {
             MovimientoUtilizado.CurrentPP -= 1;
-            
-        }                                           // Restamos 1 PP, ya que al usarlo se gasta.
+        } // Restamos 1 PP, ya que al usarlo se gasta.
     }
 }

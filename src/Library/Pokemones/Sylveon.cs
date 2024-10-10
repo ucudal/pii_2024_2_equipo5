@@ -17,11 +17,11 @@ public class Sylveon
     public List<IMovimiento> Movimientos { get; set; }
     public List<ETipos> Tipo { get; set; }
 
-    
+
     public Sylveon()
     {
         Nombre = "Sylveon";
-        
+
         SaludTotal = 115;
         SaludActual = SaludTotal;
 
@@ -31,15 +31,15 @@ public class Sylveon
         ValorDefensaEspecial = 49;
         Debil = false;
 
-        Movimientos = new List<IMovimiento>{ new FuerzaLunar(), new AtaqueRapido(), new Placaje() };
-        Tipo = new List<ETipos> { ETipos.HADA };
-
+        Movimientos = new List<IMovimiento> { new FuerzaLunar(), new AtaqueRapido(), new Placaje() };
+        Tipo = new List<ETipos> { ETipos.HADA, ETipos.NORMAL };
     }
 
     public void RecibirDanio(int danio)
     {
         SaludActual = Math.Max(SaludActual - danio, 0);
-        if (SaludActual <= 0)        {
+        if (SaludActual <= 0)
+        {
             Debil = true;
         }
     }
@@ -53,7 +53,6 @@ public class Sylveon
         if (MovimientoUtilizado != null)
         {
             MovimientoUtilizado.CurrentPP -= 1;
-            
-        }                                           // Restamos 1 PP, ya que al usarlo se gasta.
+        } // Restamos 1 PP, ya que al usarlo se gasta.
     }
 }

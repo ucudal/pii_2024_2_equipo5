@@ -17,11 +17,11 @@ public class Pikachu : IPokemon
     public List<IMovimiento> Movimientos { get; set; }
     public List<ETipos> Tipo { get; set; }
 
-    
+
     public Pikachu()
     {
         Nombre = "Pikachu";
-        
+
         SaludTotal = 100;
         SaludActual = SaludTotal;
 
@@ -31,15 +31,15 @@ public class Pikachu : IPokemon
         ValorDefensaEspecial = 35;
         Debil = false;
 
-        Movimientos = new List<IMovimiento>{ new Impactrueno(), new AtaqueRapido(), new Rayo(), new BolaVoltio() };
-        Tipo = new List<ETipos> { ETipos.ELECTRICO };
-
+        Movimientos = new List<IMovimiento> { new Impactrueno(), new AtaqueRapido(), new Rayo(), new BolaVoltio() };
+        Tipo = new List<ETipos> { ETipos.ELECTRICO, ETipos.NORMAL };
     }
 
     public void RecibirDanio(int danio)
     {
         SaludActual = Math.Max(SaludActual - danio, 0);
-        if (SaludActual <= 0)        {
+        if (SaludActual <= 0)
+        {
             Debil = true;
         }
     }
@@ -53,7 +53,6 @@ public class Pikachu : IPokemon
         if (MovimientoUtilizado != null)
         {
             MovimientoUtilizado.CurrentPP -= 1;
-            
-        }                                           // Restamos 1 PP, ya que al usarlo se gasta.
+        } // Restamos 1 PP, ya que al usarlo se gasta.
     }
 }

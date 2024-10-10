@@ -16,11 +16,11 @@ public class Snorlax
     public List<IMovimiento> Movimientos { get; set; }
     public List<ETipos> Tipo { get; set; }
 
-    
+
     public Snorlax()
     {
         Nombre = "Snorlax";
-        
+
         SaludTotal = 150;
         SaludActual = SaludTotal;
 
@@ -30,15 +30,15 @@ public class Snorlax
         ValorDefensaEspecial = 75;
         Debil = false;
 
-        Movimientos = new List<IMovimiento>{ new Placaje() };
+        Movimientos = new List<IMovimiento> { new Placaje() };
         Tipo = new List<ETipos> { ETipos.NORMAL };
-
     }
 
     public void RecibirDanio(int danio)
     {
         SaludActual = Math.Max(SaludActual - danio, 0);
-        if (SaludActual <= 0)        {
+        if (SaludActual <= 0)
+        {
             Debil = true;
         }
     }
@@ -52,7 +52,6 @@ public class Snorlax
         if (MovimientoUtilizado != null)
         {
             MovimientoUtilizado.CurrentPP -= 1;
-            
-        }                                           // Restamos 1 PP, ya que al usarlo se gasta.
+        } // Restamos 1 PP, ya que al usarlo se gasta.
     }
 }

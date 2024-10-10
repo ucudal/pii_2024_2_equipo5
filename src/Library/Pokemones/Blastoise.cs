@@ -5,7 +5,7 @@ using Library.Movimientos.Normal;
 
 namespace Library.Pokemones;
 
-public class Blastoise: IPokemon
+public class Blastoise : IPokemon
 {
     public string Nombre { get; set; }
     public int SaludTotal { get; set; }
@@ -18,11 +18,11 @@ public class Blastoise: IPokemon
     public List<ETipos> Tipo { get; set; }
     public bool Debil { get; set; }
 
-    
+
     public Blastoise()
     {
         Nombre = "Blastoise";
-        
+
         SaludTotal = 135;
         SaludActual = SaludTotal;
 
@@ -32,15 +32,15 @@ public class Blastoise: IPokemon
         ValorDefensaEspecial = 50;
         Debil = false;
 
-        Movimientos = new List<IMovimiento>{ new Hidrobomba(), new Hidropulso(), new Burbuja(), new Placaje() };
-        Tipo = new List<ETipos> { ETipos.AGUA };
-
+        Movimientos = new List<IMovimiento> { new Hidrobomba(), new Hidropulso(), new Burbuja(), new Placaje() };
+        Tipo = new List<ETipos> { ETipos.AGUA, ETipos.NORMAL };
     }
 
     public void RecibirDanio(int danio)
     {
         SaludActual = Math.Max(SaludActual - danio, 0);
-        if (SaludActual <= 0)        {
+        if (SaludActual <= 0)
+        {
             Debil = true;
         }
     }
@@ -53,7 +53,6 @@ public class Blastoise: IPokemon
         if (MovimientoUtilizado != null)
         {
             MovimientoUtilizado.CurrentPP -= 1;
-            
-        }                                           // Restamos 1 PP, ya que al usarlo se gasta.
+        } // Restamos 1 PP, ya que al usarlo se gasta.
     }
 }

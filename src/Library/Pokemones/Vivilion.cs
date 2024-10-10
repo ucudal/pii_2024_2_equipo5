@@ -18,11 +18,11 @@ public class Vivilion
     public List<IMovimiento> Movimientos { get; set; }
     public List<ETipos> Tipo { get; set; }
 
-    
+
     public Vivilion()
     {
         Nombre = "Vivillion";
-        
+
         SaludTotal = 109;
         SaludActual = SaludTotal;
 
@@ -32,15 +32,15 @@ public class Vivilion
         ValorDefensaEspecial = 55;
         Debil = false;
 
-        Movimientos = new List<IMovimiento>{ new Zumbido(), new Placaje(), new TijeraX(), new Psicoonda() };
-        Tipo = new List<ETipos> { ETipos.BICHO, ETipos.VOLADOR };
-
+        Movimientos = new List<IMovimiento> { new Zumbido(), new Placaje(), new TijeraX(), new Psicoonda() };
+        Tipo = new List<ETipos> { ETipos.BICHO, ETipos.PSIQUICO, ETipos.NORMAL };
     }
-    
+
     public void RecibirDanio(int danio)
     {
         SaludActual = Math.Max(SaludActual - danio, 0);
-        if (SaludActual <= 0)        {
+        if (SaludActual <= 0)
+        {
             Debil = true;
         }
     }
@@ -54,7 +54,6 @@ public class Vivilion
         if (MovimientoUtilizado != null)
         {
             MovimientoUtilizado.CurrentPP -= 1;
-            
-        }                                           // Restamos 1 PP, ya que al usarlo se gasta.
+        } // Restamos 1 PP, ya que al usarlo se gasta.
     }
 }

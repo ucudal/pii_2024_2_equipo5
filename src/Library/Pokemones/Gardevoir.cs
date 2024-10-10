@@ -17,11 +17,11 @@ public class Gardevoir : IPokemon
     public List<IMovimiento> Movimientos { get; set; }
     public List<ETipos> Tipo { get; set; }
 
-    
+
     public Gardevoir()
     {
         Nombre = "Gardevoir";
-        
+
         SaludTotal = 120;
         SaludActual = SaludTotal;
 
@@ -31,15 +31,15 @@ public class Gardevoir : IPokemon
         ValorDefensaEspecial = 50;
         Debil = false;
 
-        Movimientos = new List<IMovimiento>{ new FuerzaLunar(), new Psiquico(), new Confusion() };
+        Movimientos = new List<IMovimiento> { new FuerzaLunar(), new Psiquico(), new Confusion() };
         Tipo = new List<ETipos> { ETipos.PSIQUICO, ETipos.HADA };
-
     }
 
     public void RecibirDanio(int danio)
     {
         SaludActual = Math.Max(SaludActual - danio, 0);
-        if (SaludActual <= 0)        {
+        if (SaludActual <= 0)
+        {
             Debil = true;
         }
     }
@@ -53,7 +53,6 @@ public class Gardevoir : IPokemon
         if (MovimientoUtilizado != null)
         {
             MovimientoUtilizado.CurrentPP -= 1;
-            
-        }                                           // Restamos 1 PP, ya que al usarlo se gasta.
+        } // Restamos 1 PP, ya que al usarlo se gasta.
     }
 }

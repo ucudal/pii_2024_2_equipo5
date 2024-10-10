@@ -18,11 +18,11 @@ public class Dragonite : IPokemon
     public List<IMovimiento> Movimientos { get; set; }
     public List<ETipos> Tipo { get; set; }
 
-    
+
     public Dragonite()
     {
         Nombre = "Dragonite";
-        
+
         SaludTotal = 125;
         SaludActual = SaludTotal;
 
@@ -32,15 +32,15 @@ public class Dragonite : IPokemon
         ValorDefensaEspecial = 55;
         Debil = false;
 
-        Movimientos = new List<IMovimiento>{ new Corte(), new Vuelo(), new GarraDragon(), new PulsoDragon() };
-        Tipo = new List<ETipos> { ETipos.DRAGON, ETipos.VOLADOR };
-
+        Movimientos = new List<IMovimiento> { new Corte(), new Vuelo(), new GarraDragon(), new PulsoDragon() };
+        Tipo = new List<ETipos> { ETipos.DRAGON, ETipos.VOLADOR, ETipos.NORMAL };
     }
 
     public void RecibirDanio(int danio)
     {
         SaludActual = Math.Max(SaludActual - danio, 0);
-        if (SaludActual <= 0)        {
+        if (SaludActual <= 0)
+        {
             Debil = true;
         }
     }
@@ -54,7 +54,6 @@ public class Dragonite : IPokemon
         if (MovimientoUtilizado != null)
         {
             MovimientoUtilizado.CurrentPP -= 1;
-            
-        }                                           // Restamos 1 PP, ya que al usarlo se gasta.
+        } // Restamos 1 PP, ya que al usarlo se gasta.
     }
 }
