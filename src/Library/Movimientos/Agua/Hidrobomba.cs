@@ -3,7 +3,7 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Agua;
 
-public class Hidromba : iMovimiento
+public class Hidrobomba : iMovimiento
 {
     public Tipos Tipos { get; } = Tipos.AGUA;
         
@@ -18,7 +18,7 @@ public class Hidromba : iMovimiento
     public bool Especial { get; } = true;
 
 
-    public Hidromba()
+    public Hidrobomba()
     {
         CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }

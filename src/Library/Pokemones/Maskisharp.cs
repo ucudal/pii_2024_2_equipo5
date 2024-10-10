@@ -1,5 +1,6 @@
 using Library.Enums;
 using Library.Interfaces;
+using Library.Movimientos.Normal;
 
 namespace Library.Pokemones;
 
@@ -16,7 +17,7 @@ public class Maskisharp : iPokemon
     public List<Tipos> Tipo { get; set; }
 
     
-    public Mashikarp()
+    public Maskisharp()
     {
         Nombre = "Mashikarp";
         
@@ -30,6 +31,7 @@ public class Maskisharp : iPokemon
         Debil = false;
 
         Movimientos = new List<iMovimiento>{ new Salpicadura(), new Placaje() };
+        
         Tipo = new List<Tipos> { Tipos.AGUA };
 
     }

@@ -1,5 +1,8 @@
 using Library.Enums;
 using Library.Interfaces;
+using Library.Movimientos.Bicho;
+using Library.Movimientos.Normal;
+using Library.Movimientos.Psiquico;
 
 namespace Library.Pokemones;
 
@@ -16,7 +19,7 @@ public class Vivilion
     public List<Tipos> Tipo { get; set; }
 
     
-    public Vivillion()
+    public Vivilion()
     {
         Nombre = "Vivillion";
         

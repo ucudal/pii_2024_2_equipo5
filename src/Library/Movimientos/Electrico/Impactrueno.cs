@@ -1,8 +1,9 @@
 using Library.Enums;
+using Library.Interfaces;
 
 namespace Library.Movimientos.Electrico;
 
-public class Impactrueno
+public class Impactrueno: iMovimiento
 {
     public Tipos Tipos { get; } = Tipos.ELECTRICO;
         

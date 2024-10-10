@@ -1,3 +1,5 @@
+using Library.Enums;
+
 namespace Library.Interfaces;
 
 public interface iPokemon

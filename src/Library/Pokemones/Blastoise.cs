@@ -1,5 +1,7 @@
 using Library.Enums;
 using Library.Interfaces;
+using Library.Movimientos.Agua;
+using Library.Movimientos.Normal;
 
 namespace Library.Pokemones;
 

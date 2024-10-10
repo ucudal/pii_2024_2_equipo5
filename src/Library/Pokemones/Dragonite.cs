@@ -1,5 +1,8 @@
 using Library.Enums;
 using Library.Interfaces;
+using Library.Movimientos.Dragon;
+using Library.Movimientos.Normal;
+using Library.Movimientos.Volador;
 
 namespace Library.Pokemones;
 

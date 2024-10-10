@@ -1,5 +1,8 @@
 using Library.Enums;
 using Library.Interfaces;
+using Library.Movimientos.Normal;
+using Library.Movimientos.Planta;
+using Library.Movimientos.Veneno;
 
 namespace Library.Pokemones;
 

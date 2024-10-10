@@ -1,4 +1,7 @@
+using Library.Enums;
 using Library.Interfaces;
+using Library.Movimientos.Electrico;
+using Library.Movimientos.Normal;
 
 namespace Library.Pokemones;
 

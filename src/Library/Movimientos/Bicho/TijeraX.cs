@@ -1,26 +1,25 @@
 using Library.Enums;
 using Library.Interfaces;
 
-namespace Library.Movimientos.Psiquico;
+namespace Library.Movimientos.Bicho;
 
-public class Psicoconda: iMovimiento
+public class TijeraX: iMovimiento
 {
-    public Tipos Tipos { get; } = Tipos.PSIQUICO;
+    public Tipos Tipos { get; } = Tipos.BICHO;
         
-    public string Nombre { get; } = "Psicoonda";
+    public string Nombre { get; } = "Tijera X";
         
-    public int Daño { get; } = 32;
+    public int Daño { get; } = 35;
         
     public int PP { get; } = 10;
         
     public int CurrentPP { get; set; }
         
-    public bool Especial { get; } = true;
+    public bool Especial { get; } = false;
 
 
-    public Psicoconda()
+    public TijeraX()
     {
         CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }
-
 }

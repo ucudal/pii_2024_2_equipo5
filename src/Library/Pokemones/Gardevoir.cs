@@ -1,5 +1,7 @@
 using Library.Enums;
 using Library.Interfaces;
+using Library.Movimientos.Hada;
+using Library.Movimientos.Psiquico;
 
 namespace Library.Pokemones;
 

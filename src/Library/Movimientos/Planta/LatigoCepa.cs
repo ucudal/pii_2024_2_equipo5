@@ -1,8 +1,9 @@
 using Library.Enums;
+using Library.Interfaces;
 
 namespace Library.Movimientos.Planta;
 
-public class LatigoCepa
+public class LatigoCepa: iMovimiento
 {
     public Tipos Tipos { get; } = Tipos.PLANTA;
         
