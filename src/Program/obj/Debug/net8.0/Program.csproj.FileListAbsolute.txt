@@ -1,0 +1,15 @@
+/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/src/Program/bin/Debug/net8.0/Program
+/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/src/Program/bin/Debug/net8.0/Program.deps.json
+/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/src/Program/bin/Debug/net8.0/Program.runtimeconfig.json
+/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/src/Program/bin/Debug/net8.0/Program.dll
+/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/src/Program/bin/Debug/net8.0/Program.pdb
+/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/src/Program/obj/Debug/net8.0/Program.GeneratedMSBuildEditorConfig.editorconfig
+/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/src/Program/obj/Debug/net8.0/Program.AssemblyInfoInputs.cache
+/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/src/Program/obj/Debug/net8.0/Program.AssemblyInfo.cs
+/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/src/Program/obj/Debug/net8.0/Program.csproj.CoreCompileInputs.cache
+/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/src/Program/obj/Debug/net8.0/Program.sourcelink.json
+/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/src/Program/obj/Debug/net8.0/Program.dll
+/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/src/Program/obj/Debug/net8.0/refint/Program.dll
+/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/src/Program/obj/Debug/net8.0/Program.pdb
+/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/src/Program/obj/Debug/net8.0/Program.genruntimeconfig.cache
+/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/src/Program/obj/Debug/net8.0/ref/Program.dll
