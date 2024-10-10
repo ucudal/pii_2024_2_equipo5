@@ -15,8 +15,8 @@ public class Venasaur
     public int ValorDefensa { get; set; }
     public int ValorAtaqueEspecial { get; set; }
     public int ValorDefensaEspecial { get; set; }
-    public List<iMovimiento> Movimientos { get; set; }
-    public List<Tipos> Tipo { get; set; }
+    public List<IMovimiento> Movimientos { get; set; }
+    public List<ETipos> Tipo { get; set; }
 
     
     public Venasaur()
@@ -32,8 +32,8 @@ public class Venasaur
         ValorDefensaEspecial = 60;
         Debil = false;
 
-        Movimientos = new List<iMovimiento>{ new LatigoCepa(), new HojaMagica(), new CargaToxica(), new Placaje() };
-        Tipo = new List<Tipos> { Tipos.PLANTA, Tipos.VENENO };
+        Movimientos = new List<IMovimiento>{ new LatigoCepa(), new HojaMagica(), new CargaToxica(), new Placaje() };
+        Tipo = new List<ETipos> { ETipos.PLANTA, ETipos.VENENO };
 
     }
 
@@ -47,9 +47,9 @@ public class Venasaur
 
     public bool Debil { get; set; }
 
-    public void UsarMovimiento(iMovimiento movimiento)
+    public void UsarMovimiento(IMovimiento movimiento)
     {
-        iMovimiento MovimientoUtilizado = Movimientos.Find(f => f == movimiento);
+        IMovimiento MovimientoUtilizado = Movimientos.Find(f => f == movimiento);
 
         if (MovimientoUtilizado != null)
         {

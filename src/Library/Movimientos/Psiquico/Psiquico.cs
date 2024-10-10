@@ -3,9 +3,9 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Psiquico;
 
-public class Psiquico : iMovimiento
+public class Psiquico : IMovimiento
 {
-    public Tipos Tipos { get; } = Tipos.PSIQUICO;
+    public ETipos ETipos { get; } = ETipos.PSIQUICO;
         
     public string Nombre { get; } = "Psiquico";
         

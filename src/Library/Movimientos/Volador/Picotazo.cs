@@ -3,9 +3,9 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Volador;
 
-public class Picotazo: iMovimiento
+public class Picotazo: IMovimiento
 {
-    public Tipos Tipos { get; } = Tipos.VOLADOR;
+    public ETipos ETipos { get; } = ETipos.VOLADOR;
         
     public string Nombre { get; } = "Picotazo";
         

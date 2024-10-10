@@ -3,9 +3,9 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Agua;
 
-public class Hidrobomba : iMovimiento
+public class Hidrobomba : IMovimiento
 {
-    public Tipos Tipos { get; } = Tipos.AGUA;
+    public ETipos ETipos { get; } = ETipos.AGUA;
         
     public string Nombre { get; } = "Hidrobomba";
         

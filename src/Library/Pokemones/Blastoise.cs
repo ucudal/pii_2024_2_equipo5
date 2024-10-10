@@ -5,7 +5,7 @@ using Library.Movimientos.Normal;
 
 namespace Library.Pokemones;
 
-public class Blastoise: iPokemon
+public class Blastoise: IPokemon
 {
     public string Nombre { get; set; }
     public int SaludTotal { get; set; }
@@ -14,8 +14,8 @@ public class Blastoise: iPokemon
     public int ValorDefensa { get; set; }
     public int ValorAtaqueEspecial { get; set; }
     public int ValorDefensaEspecial { get; set; }
-    public List<iMovimiento> Movimientos { get; set; }
-    public List<Tipos> Tipo { get; set; }
+    public List<IMovimiento> Movimientos { get; set; }
+    public List<ETipos> Tipo { get; set; }
     public bool Debil { get; set; }
 
     
@@ -32,8 +32,8 @@ public class Blastoise: iPokemon
         ValorDefensaEspecial = 50;
         Debil = false;
 
-        Movimientos = new List<iMovimiento>{ new Hidrobomba(), new Hidropulso(), new Burbuja(), new Placaje() };
-        Tipo = new List<Tipos> { Tipos.AGUA };
+        Movimientos = new List<IMovimiento>{ new Hidrobomba(), new Hidropulso(), new Burbuja(), new Placaje() };
+        Tipo = new List<ETipos> { ETipos.AGUA };
 
     }
 
@@ -46,9 +46,9 @@ public class Blastoise: iPokemon
     }
 
 
-    public void UsarMovimiento(iMovimiento movimiento)
+    public void UsarMovimiento(IMovimiento movimiento)
     {
-        iMovimiento MovimientoUtilizado = Movimientos.Find(f => f == movimiento);
+        IMovimiento MovimientoUtilizado = Movimientos.Find(f => f == movimiento);
 
         if (MovimientoUtilizado != null)
         {

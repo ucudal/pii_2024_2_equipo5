@@ -3,9 +3,9 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Normal;
 
-public class AtaqueRapido: iMovimiento
+public class AtaqueRapido: IMovimiento
 {
-    public Tipos Tipos { get; } = Tipos.NORMAL;
+    public ETipos ETipos { get; } = ETipos.NORMAL;
         
     public string Nombre { get; } = "Ataque Rapido";
         

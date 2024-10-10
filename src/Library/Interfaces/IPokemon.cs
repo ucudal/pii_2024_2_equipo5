@@ -2,7 +2,7 @@ using Library.Enums;
 
 namespace Library.Interfaces;
 
-public interface iPokemon
+public interface IPokemon
 {
     string Nombre { get; set; }
     int SaludTotal { get; set; }
@@ -12,8 +12,8 @@ public interface iPokemon
     int ValorDefensa { get; set; }
     int ValorAtaqueEspecial { get; set; }
     int ValorDefensaEspecial { get; set; }
-    List<Tipos> Tipo { get; set; } 
-    List<iMovimiento> Movimientos { get; set; }
+    List<ETipos> Tipo { get; set; } 
+    List<IMovimiento> Movimientos { get; set; }
     void RecibirDanio(int dañoRecibido);
-    void UsarMovimiento(iMovimiento movimiento);
+    void UsarMovimiento(IMovimiento movimiento);
 }

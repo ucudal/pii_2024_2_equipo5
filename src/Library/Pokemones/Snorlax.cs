@@ -13,8 +13,8 @@ public class Snorlax
     public int ValorDefensa { get; set; }
     public int ValorAtaqueEspecial { get; set; }
     public int ValorDefensaEspecial { get; set; }
-    public List<iMovimiento> Movimientos { get; set; }
-    public List<Tipos> Tipo { get; set; }
+    public List<IMovimiento> Movimientos { get; set; }
+    public List<ETipos> Tipo { get; set; }
 
     
     public Snorlax()
@@ -30,8 +30,8 @@ public class Snorlax
         ValorDefensaEspecial = 75;
         Debil = false;
 
-        Movimientos = new List<iMovimiento>{ new Placaje() };
-        Tipo = new List<Tipos> { Tipos.NORMAL };
+        Movimientos = new List<IMovimiento>{ new Placaje() };
+        Tipo = new List<ETipos> { ETipos.NORMAL };
 
     }
 
@@ -45,9 +45,9 @@ public class Snorlax
 
     public bool Debil { get; set; }
 
-    public void UsarMovimiento(iMovimiento movimiento)
+    public void UsarMovimiento(IMovimiento movimiento)
     {
-        iMovimiento MovimientoUtilizado = Movimientos.Find(f => f == movimiento);
+        IMovimiento MovimientoUtilizado = Movimientos.Find(f => f == movimiento);
 
         if (MovimientoUtilizado != null)
         {

@@ -6,7 +6,7 @@ using Library.Movimientos.Volador;
 
 namespace Library.Pokemones;
 
-public class Dragonite : iPokemon
+public class Dragonite : IPokemon
 {
     public string Nombre { get; set; }
     public int SaludTotal { get; set; }
@@ -15,8 +15,8 @@ public class Dragonite : iPokemon
     public int ValorDefensa { get; set; }
     public int ValorAtaqueEspecial { get; set; }
     public int ValorDefensaEspecial { get; set; }
-    public List<iMovimiento> Movimientos { get; set; }
-    public List<Tipos> Tipo { get; set; }
+    public List<IMovimiento> Movimientos { get; set; }
+    public List<ETipos> Tipo { get; set; }
 
     
     public Dragonite()
@@ -32,8 +32,8 @@ public class Dragonite : iPokemon
         ValorDefensaEspecial = 55;
         Debil = false;
 
-        Movimientos = new List<iMovimiento>{ new Corte(), new Vuelo(), new GarraDragon(), new PulsoDragon() };
-        Tipo = new List<Tipos> { Tipos.DRAGON, Tipos.VOLADOR };
+        Movimientos = new List<IMovimiento>{ new Corte(), new Vuelo(), new GarraDragon(), new PulsoDragon() };
+        Tipo = new List<ETipos> { ETipos.DRAGON, ETipos.VOLADOR };
 
     }
 
@@ -47,9 +47,9 @@ public class Dragonite : iPokemon
 
     public bool Debil { get; set; }
 
-    public void UsarMovimiento(iMovimiento movimiento)
+    public void UsarMovimiento(IMovimiento movimiento)
     {
-        iMovimiento MovimientoUtilizado = Movimientos.Find(f => f == movimiento);
+        IMovimiento MovimientoUtilizado = Movimientos.Find(f => f == movimiento);
 
         if (MovimientoUtilizado != null)
         {

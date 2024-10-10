@@ -3,9 +3,9 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Bicho;
 
-public class Zumbido: iMovimiento
+public class Zumbido: IMovimiento
 {
-    public Tipos Tipos { get; } = Tipos.BICHO;
+    public ETipos ETipos { get; } = ETipos.BICHO;
         
     public string Nombre { get; } = "Zumbido";
         

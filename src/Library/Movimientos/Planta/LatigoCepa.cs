@@ -3,9 +3,9 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Planta;
 
-public class LatigoCepa: iMovimiento
+public class LatigoCepa: IMovimiento
 {
-    public Tipos Tipos { get; } = Tipos.PLANTA;
+    public ETipos ETipos { get; } = ETipos.PLANTA;
         
     public string Nombre { get; } = "Latigo Cepa";
         

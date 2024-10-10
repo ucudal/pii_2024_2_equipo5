@@ -15,8 +15,8 @@ public class Vivilion
     public int ValorDefensa { get; set; }
     public int ValorAtaqueEspecial { get; set; }
     public int ValorDefensaEspecial { get; set; }
-    public List<iMovimiento> Movimientos { get; set; }
-    public List<Tipos> Tipo { get; set; }
+    public List<IMovimiento> Movimientos { get; set; }
+    public List<ETipos> Tipo { get; set; }
 
     
     public Vivilion()
@@ -32,8 +32,8 @@ public class Vivilion
         ValorDefensaEspecial = 55;
         Debil = false;
 
-        Movimientos = new List<iMovimiento>{ new Zumbido(), new Placaje(), new TijeraX(), new Psicoonda() };
-        Tipo = new List<Tipos> { Tipos.BICHO, Tipos.VOLADOR };
+        Movimientos = new List<IMovimiento>{ new Zumbido(), new Placaje(), new TijeraX(), new Psicoonda() };
+        Tipo = new List<ETipos> { ETipos.BICHO, ETipos.VOLADOR };
 
     }
     
@@ -47,9 +47,9 @@ public class Vivilion
 
     public bool Debil { get; set; }
 
-    public void UsarMovimiento(iMovimiento movimiento)
+    public void UsarMovimiento(IMovimiento movimiento)
     {
-        iMovimiento MovimientoUtilizado = Movimientos.Find(f => f == movimiento);
+        IMovimiento MovimientoUtilizado = Movimientos.Find(f => f == movimiento);
 
         if (MovimientoUtilizado != null)
         {

@@ -3,9 +3,9 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Dragon;
 
-public class PulsoDragon : iMovimiento
+public class PulsoDragon : IMovimiento
 {
-    public Tipos Tipos { get; } = Tipos.DRAGON;
+    public ETipos ETipos { get; } = ETipos.DRAGON;
         
     public string Nombre { get; } = "Pulso Dragon";
         

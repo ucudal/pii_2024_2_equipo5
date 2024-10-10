@@ -4,7 +4,7 @@ using Library.Movimientos.Normal;
 
 namespace Library.Pokemones;
 
-public class Maskisharp : iPokemon
+public class Maskisharp : IPokemon
 {
     public string Nombre { get; set; }
     public int SaludTotal { get; set; }
@@ -13,8 +13,8 @@ public class Maskisharp : iPokemon
     public int ValorDefensa { get; set; }
     public int ValorAtaqueEspecial { get; set; }
     public int ValorDefensaEspecial { get; set; }
-    public List<iMovimiento> Movimientos { get; set; }
-    public List<Tipos> Tipo { get; set; }
+    public List<IMovimiento> Movimientos { get; set; }
+    public List<ETipos> Tipo { get; set; }
 
     
     public Maskisharp()
@@ -30,9 +30,9 @@ public class Maskisharp : iPokemon
         ValorDefensaEspecial = 40;
         Debil = false;
 
-        Movimientos = new List<iMovimiento>{ new Salpicadura(), new Placaje() };
+        Movimientos = new List<IMovimiento>{ new Salpicadura(), new Placaje() };
         
-        Tipo = new List<Tipos> { Tipos.AGUA };
+        Tipo = new List<ETipos> { ETipos.AGUA };
 
     }
 
@@ -46,9 +46,9 @@ public class Maskisharp : iPokemon
 
     public bool Debil { get; set; }
 
-    public void UsarMovimiento(iMovimiento movimiento)
+    public void UsarMovimiento(IMovimiento movimiento)
     {
-        iMovimiento MovimientoUtilizado = Movimientos.Find(f => f == movimiento);
+        IMovimiento MovimientoUtilizado = Movimientos.Find(f => f == movimiento);
 
         if (MovimientoUtilizado != null)
         {

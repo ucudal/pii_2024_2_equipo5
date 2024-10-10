@@ -3,9 +3,9 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Electrico;
 
-public class Rayo: iMovimiento
+public class Rayo: IMovimiento
 {
-    public Tipos Tipos { get; } = Tipos.ELECTRICO;
+    public ETipos ETipos { get; } = ETipos.ELECTRICO;
         
     public string Nombre { get; } = "Rayo";
         

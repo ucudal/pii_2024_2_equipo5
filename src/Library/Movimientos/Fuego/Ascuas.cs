@@ -3,9 +3,9 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Fuego;
 
-public class Ascuas: iMovimiento
+public class Ascuas: IMovimiento
 {
-    public Tipos Tipos { get; } = Tipos.FUEGO;
+    public ETipos ETipos { get; } = ETipos.FUEGO;
         
     public string Nombre { get; } = "Ascuas";
         

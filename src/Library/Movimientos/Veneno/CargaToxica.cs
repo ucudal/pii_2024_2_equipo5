@@ -3,9 +3,9 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Veneno;
 
-public class CargaToxica: iMovimiento
+public class CargaToxica: IMovimiento
 {
-    public Tipos Tipos { get; } = Tipos.VENENO;
+    public ETipos ETipos { get; } = ETipos.VENENO;
         
     public string Nombre { get; } = "Carga Toxica";
         

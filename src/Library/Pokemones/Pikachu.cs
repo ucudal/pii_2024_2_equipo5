@@ -5,7 +5,7 @@ using Library.Movimientos.Normal;
 
 namespace Library.Pokemones;
 
-public class Pikachu : iPokemon
+public class Pikachu : IPokemon
 {
     public string Nombre { get; set; }
     public int SaludTotal { get; set; }
@@ -14,8 +14,8 @@ public class Pikachu : iPokemon
     public int ValorDefensa { get; set; }
     public int ValorAtaqueEspecial { get; set; }
     public int ValorDefensaEspecial { get; set; }
-    public List<iMovimiento> Movimientos { get; set; }
-    public List<Tipos> Tipo { get; set; }
+    public List<IMovimiento> Movimientos { get; set; }
+    public List<ETipos> Tipo { get; set; }
 
     
     public Pikachu()
@@ -31,8 +31,8 @@ public class Pikachu : iPokemon
         ValorDefensaEspecial = 35;
         Debil = false;
 
-        Movimientos = new List<iMovimiento>{ new Impactrueno(), new AtaqueRapido(), new Rayo(), new BolaVoltio() };
-        Tipo = new List<Tipos> { Tipos.ELECTRICO };
+        Movimientos = new List<IMovimiento>{ new Impactrueno(), new AtaqueRapido(), new Rayo(), new BolaVoltio() };
+        Tipo = new List<ETipos> { ETipos.ELECTRICO };
 
     }
 
@@ -46,9 +46,9 @@ public class Pikachu : iPokemon
 
     public bool Debil { get; set; }
 
-    public void UsarMovimiento(iMovimiento movimiento)
+    public void UsarMovimiento(IMovimiento movimiento)
     {
-        iMovimiento MovimientoUtilizado = Movimientos.Find(f => f == movimiento);
+        IMovimiento MovimientoUtilizado = Movimientos.Find(f => f == movimiento);
 
         if (MovimientoUtilizado != null)
         {

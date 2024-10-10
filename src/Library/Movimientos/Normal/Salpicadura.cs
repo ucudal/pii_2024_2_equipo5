@@ -3,9 +3,9 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Normal;
 
-public class Salpicadura: iMovimiento
+public class Salpicadura: IMovimiento
 {
-    public Tipos Tipos { get; } = Tipos.NORMAL;
+    public ETipos ETipos { get; } = ETipos.NORMAL;
         
     public string Nombre { get; } = "Salpicadura";
         

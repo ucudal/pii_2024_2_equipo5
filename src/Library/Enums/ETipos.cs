@@ -3,7 +3,7 @@ namespace Library.Enums;
 /// Enum que representa los diferentes tipos de Pokemons.
 /// </summary>
 
-public enum Tipos
+public enum ETipos
 {
     /// <summary>
     /// Tipo fuego.

@@ -3,9 +3,9 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Hada;
 
-public class FuerzaLunar: iMovimiento
+public class FuerzaLunar: IMovimiento
 {
-    public Tipos Tipos { get; } = Tipos.HADA;
+    public ETipos ETipos { get; } = ETipos.HADA;
         
     public string Nombre { get; } = "Fuerza Lunar";
         

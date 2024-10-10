@@ -1,8 +1,8 @@
 namespace Library.Interfaces;
 
-public interface iMovimiento
+public interface IMovimiento
 {
-    Enums.Tipos Tipos { get; }
+    Enums.ETipos ETipos { get; }
         
     string Nombre { get; }
     int Daño { get; }
