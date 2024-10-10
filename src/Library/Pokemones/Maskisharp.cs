@@ -1,0 +1,57 @@
+using Library.Enums;
+using Library.Interfaces;
+
+namespace Library.Pokemones;
+
+public class Maskisharp : iPokemon
+{
+    public string Nombre { get; set; }
+    public int SaludTotal { get; set; }
+    public int SaludActual { get; set; }
+    public int ValorAtaque { get; set; }
+    public int ValorDefensa { get; set; }
+    public int ValorAtaqueEspecial { get; set; }
+    public int ValorDefensaEspecial { get; set; }
+    public List<iMovimiento> Movimientos { get; set; }
+    public List<Tipos> Tipo { get; set; }
+
+    
+    public Mashikarp()
+    {
+        Nombre = "Mashikarp";
+        
+        SaludTotal = 95;
+        SaludActual = SaludTotal;
+
+        ValorAtaque = 25;
+        ValorDefensa = 40;
+        ValorAtaqueEspecial = 30;
+        ValorDefensaEspecial = 40;
+        Debil = false;
+
+        Movimientos = new List<iMovimiento>{ new Salpicadura(), new Placaje() };
+        Tipo = new List<Tipos> { Tipos.AGUA };
+
+    }
+
+    public void RecibirDanio(int danio)
+    {
+        SaludActual = Math.Max(SaludActual - danio, 0);
+        if (SaludActual <= 0)        {
+            Debil = true;
+        }
+    }
+
+    public bool Debil { get; set; }
+
+    public void UsarMovimiento(iMovimiento movimiento)
+    {
+        iMovimiento MovimientoUtilizado = Movimientos.Find(f => f == movimiento);
+
+        if (MovimientoUtilizado != null)
+        {
+            MovimientoUtilizado.CurrentPP -= 1;
+            
+        }                                           // Restamos 1 PP, ya que al usarlo se gasta.
+    }
+}
