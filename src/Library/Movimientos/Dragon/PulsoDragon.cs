@@ -5,7 +5,7 @@ namespace Library.Movimientos.Dragon;
 
 public class PulsoDragon : IMovimiento
 {
-    public ETipos ETipos { get; } = ETipos.DRAGON;
+    public ETipos Tipos { get; } = ETipos.DRAGON;
         
     public string Nombre { get; } = "Pulso Dragon";
         

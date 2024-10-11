@@ -5,7 +5,7 @@ namespace Library.Movimientos.Psiquico;
 
 public class Confusion: IMovimiento
 {
-    public ETipos ETipos { get; } = ETipos.PSIQUICO;
+    public ETipos Tipos { get; } = ETipos.PSIQUICO;
         
     public string Nombre { get; } = "Confusion";
         
