@@ -1,9 +1,7 @@
-using System.Collections.Generic;
 using Library.Interfaces;
 using Library.Logica;
 using Library.Movimientos.Electrico;
 using Library.Pokemones;
-using NUnit.Framework;
 
 namespace LibraryTests
 {
