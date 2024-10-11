@@ -15,3 +15,4 @@ test/**/obj/
 *.project.restore.info
 *.packagespec.json
 *.props
+test/LibraryTests/bin/Debug/net8.0/*
