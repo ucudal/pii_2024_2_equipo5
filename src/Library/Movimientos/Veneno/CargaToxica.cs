@@ -5,7 +5,7 @@ namespace Library.Movimientos.Veneno;
 
 public class CargaToxica: IMovimiento
 {
-    public ETipos ETipos { get; } = ETipos.VENENO;
+    public ETipos Tipos { get; } = ETipos.VENENO;
         
     public string Nombre { get; } = "Carga Toxica";
         

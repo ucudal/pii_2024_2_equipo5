@@ -5,7 +5,7 @@ namespace Library.Movimientos.Agua;
 
 public class Hidrobomba : IMovimiento
 {
-    public ETipos ETipos { get; } = ETipos.AGUA;
+    public ETipos Tipos { get; } = ETipos.AGUA;
         
     public string Nombre { get; } = "Hidrobomba";
         

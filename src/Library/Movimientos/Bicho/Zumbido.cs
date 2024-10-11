@@ -5,7 +5,7 @@ namespace Library.Movimientos.Bicho;
 
 public class Zumbido: IMovimiento
 {
-    public ETipos ETipos { get; } = ETipos.BICHO;
+    public ETipos Tipos { get; } = ETipos.BICHO;
         
     public string Nombre { get; } = "Zumbido";
         

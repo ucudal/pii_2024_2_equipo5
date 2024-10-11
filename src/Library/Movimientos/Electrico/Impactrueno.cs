@@ -5,7 +5,7 @@ namespace Library.Movimientos.Electrico;
 
 public class Impactrueno: IMovimiento
 {
-    public ETipos ETipos { get; } = ETipos.ELECTRICO;
+    public ETipos Tipos { get; } = ETipos.ELECTRICO;
         
     public string Nombre { get; } = "Impactrueno";
         

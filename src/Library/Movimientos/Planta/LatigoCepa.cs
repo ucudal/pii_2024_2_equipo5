@@ -5,7 +5,7 @@ namespace Library.Movimientos.Planta;
 
 public class LatigoCepa: IMovimiento
 {
-    public ETipos ETipos { get; } = ETipos.PLANTA;
+    public ETipos Tipos { get; } = ETipos.PLANTA;
         
     public string Nombre { get; } = "Latigo Cepa";
         
