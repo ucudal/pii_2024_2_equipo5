@@ -1,0 +1,17 @@
+# Ignorar carpetas de compilación
+src/**/obj/
+test/**/obj/
+
+# Ignorar archivos NuGet
+*.nuget.dgspec.json
+*.nuget.g.props
+*.nuget.cache
+*.nuget.g.targets
+*.assets.cache
+*.AssemblyInfo.cs
+*.AssemblyInfoInputs.cache
+*.editorconfig
+*.project.model.nuget.info
+*.project.restore.info
+*.packagespec.json
+*.props
