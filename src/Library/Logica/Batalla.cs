@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using Library.Interfaces;
 using Library.Movimientos.Fuego;
 
@@ -90,7 +93,7 @@ public class Batalla
 
     public void SeleccionarPokemones(Entrenador entrenador, int cantidadPokemones)
     {
-        Console.WriteLine($"Selecciona {cantidadPokemones} pokemones de la siguiente lista, {entrenador.Nombre}:");
+        //Console.WriteLine($"Selecciona {cantidadPokemones} pokemones de la siguiente lista, {entrenador.Nombre}:");
         // Mostrar lista de Pokémon disponibles
 
         // Selecciona Pokémon de la lista disponible
@@ -100,7 +103,7 @@ public class Batalla
                 nuevoPokemon =
                     PokemonsDisponibles
                         .First(); // Toma el primer Pokémon disponible por ahora (luego tiene que tomar el que elija el usuario)
-            entrenador.Pokemons.Add(nuevoPokemon); // Agrega el Pokémon al entrenador
+            entrenador.AgregarPokemon(nuevoPokemon); // Agrega el Pokémon al entrenador
             pokemonsDisponibles.Remove(nuevoPokemon); // Lo elimina de la lista de disponibles
         }
 
@@ -113,14 +116,15 @@ public class Batalla
         return (ContadorTurno % 2 == 0) ? Entrenador1 : Entrenador2;
     }
 
-    public void CambiarPokemon(Entrenador entrenador)
+    //creo que este metodo tiene que estar en el entrenador porque no toiene niguna relacion con la batalla
+    public void CambiarPokemon(Entrenador entrenador, int indexPokemon)
     {
-        if (PokemonsDisponibles.Count == 0) return; // Si no hay Pokémon disponibles, salir
+        if (entrenador.Pokemons.Count == 0) return; // Si no hay Pokémon disponibles, salir
 
         Console.WriteLine($"{entrenador.Nombre}, selecciona otro pokemon:");
         // Mostrar lista de Pokémon disponibles
 
-        IPokemon nuevoPokemon = PokemonsDisponibles.First(); // Toma el primer Pokémon disponible
+        IPokemon nuevoPokemon = PokemonsDisponibles[indexPokemon]; // Toma el primer Pokémon disponible
         entrenador.PokemonActivo = nuevoPokemon; // Establece el nuevo Pokémon como activo
         PokemonsDisponibles.Remove(nuevoPokemon); // Elimina el Pokémon de la lista de disponibles
     }
@@ -153,8 +157,9 @@ public class Batalla
 
     private IMovimiento ObtenerMovimiento(Entrenador entrenadorAtacante, IMovimiento movimiento)
     {
-        // Busca el movimiento en los movimientos del Pokémon activo del entrenador, si no lo encuentra lanza la excepcion
-        return entrenadorAtacante.PokemonActivo.Movimientos.Find(f => f == movimiento)
+        // Busca el movimiento comparando por el nombre del movimiento
+        return entrenadorAtacante.PokemonActivo.Movimientos
+                   .Find(f => f.Nombre == movimiento.Nombre)
                ?? throw new InvalidOperationException("Movimiento no encontrado.");
     }
 
@@ -184,7 +189,7 @@ public class Batalla
         if (entrenadorDefensor.PokemonActivo.Debil)
         {
             Console.WriteLine($"{entrenadorDefensor.PokemonActivo.Nombre} se ha debilitado.");
-            entrenadorDefensor.Pokemons.Remove(entrenadorDefensor
+            entrenadorDefensor.RemoverPokemon(entrenadorDefensor
                 .PokemonActivo); // Elimina el Pokémon debilitado de la lista
 
             // Si el defensor no tiene más Pokémon, el atacante gana la batalla
@@ -194,7 +199,7 @@ public class Batalla
             }
             else
             {
-                CambiarPokemon(entrenadorDefensor); // Cambia al siguiente Pokémon del defensor
+                CambiarPokemon(entrenadorDefensor, 0); // Cambia al siguiente Pokémon del defensor
             }
         }
     }
