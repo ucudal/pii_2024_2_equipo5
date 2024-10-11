@@ -47,9 +47,11 @@ Creemos que cumple con el principio de inversión de dependencias **(DIP)** porq
 
 Esto mismo podemos decirlo de la clase Entrenador, que en este contexto hace que la clase sea fácil de modificar o reutilizar con diferentes implementaciones de Pokemon y Movimiento, sin cambiar la lógica de la clase Entrenador.
 
-## Desafíos
+## Notas
 - El principal desafío que encontramos fue el uso del repositorio. Hasta determinado momento el equipo se desarrolló exitosamente con el trabajo colaborativo, pero en algún momento del desarrollo el equipo empezó a tener problemas y fue preciso recurrir a los profesores para buscar ayuda.
+- En cuanto a lo aprendido fuera de clase, descubrimos los Enum, que nos permitieron acceder a una implementación más efectiva de los tipos de Pokemon como se explica más arriba.
 
-## Recursos utilizados
+### Recursos utilizados
 1. Para verificar que el programa cumpliera  con los principios SOLID, utilizamos el libro **Agile Principles, Patterns, and Practices in C#** de Robert C. Martin.
 2. Usamos también la página [Refactoring Guru](https://refactoring.guru) para la construcción de la fachada.
+3. Enums: [Tipos de Enumeración](https://learn.microsoft.com/es-es/dotnet/csharp/language-reference/builtin-types/enum)
