@@ -18,10 +18,10 @@ namespace Library.Logica
             set => nombre = value;
         }
 
-        public List<IPokemon> Pokemons
+        public IReadOnlyList<IPokemon> Pokemons
         {
-            get => pokemons;
-            set => pokemons = value;
+            get => pokemons.AsReadOnly();
+            set => pokemons = value.ToList();
         }
 
         public IPokemon PokemonActivo
@@ -102,6 +102,29 @@ namespace Library.Logica
             }
 
             return ataquesDisponibles;
+        }
+
+        // Método para agregar un Pokémon a la lista
+        public void AgregarPokemon(IPokemon pokemon)
+        {
+            if (pokemon != null && !pokemons.Contains(pokemon))
+            {
+                pokemons.Add(pokemon);
+            }
+        }
+
+        // Método para quitar un Pokémon de la lista
+        public void RemoverPokemon(IPokemon pokemon)
+        {
+            if (pokemon != null && pokemons.Contains(pokemon))
+            {
+                pokemons.Remove(pokemon);
+            }
+        }
+        
+        public void ClearPokemons()
+        {
+            pokemons.Clear();
         }
     }
 }

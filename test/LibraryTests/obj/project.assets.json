@@ -377,6 +377,16 @@
             "related": ".xml"
           }
         }
+      },
+      "Library/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Library.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Library.dll": {}
+        }
       }
     }
   },
@@ -970,10 +980,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Library/1.0.0": {
+      "type": "project",
+      "path": "../../src/Library/Library.csproj",
+      "msbuildProject": "../../src/Library/Library.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Library >= 1.0.0",
       "Microsoft.NET.Test.Sdk >= 17.8.0",
       "NUnit >= 3.14.0",
       "NUnit.Analyzers >= 3.9.0",
@@ -982,19 +998,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/eugeniaguibernau/.nuget/packages/": {}
+    "/Users/mateo/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/test/LibraryTests/LibraryTests.csproj",
+      "projectUniqueName": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/test/LibraryTests/LibraryTests.csproj",
       "projectName": "LibraryTests",
-      "projectPath": "/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/test/LibraryTests/LibraryTests.csproj",
-      "packagesPath": "/Users/eugeniaguibernau/.nuget/packages/",
-      "outputPath": "/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/test/LibraryTests/obj/",
+      "projectPath": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/test/LibraryTests/LibraryTests.csproj",
+      "packagesPath": "/Users/mateo/.nuget/packages/",
+      "outputPath": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/test/LibraryTests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/eugeniaguibernau/.nuget/NuGet/NuGet.Config"
+        "/Users/mateo/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -1005,7 +1021,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/mateo/UCU/PII/pii_2024_2_equipo5/src/Library/Library.csproj": {
+              "projectPath": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/src/Library/Library.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

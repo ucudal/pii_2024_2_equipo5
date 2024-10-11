@@ -97,3 +97,6 @@
 /Users/mateo/UCU/PII/pii_2024_2_equipo5/test/LibraryTests/obj/Debug/net8.0/LibraryTests.pdb
 /Users/mateo/UCU/PII/pii_2024_2_equipo5/test/LibraryTests/obj/Debug/net8.0/LibraryTests.genruntimeconfig.cache
 /Users/mateo/UCU/PII/pii_2024_2_equipo5/test/LibraryTests/obj/Debug/net8.0/ref/LibraryTests.dll
+/Users/mateo/UCU/PII/pii_2024_2_equipo5/test/LibraryTests/bin/Debug/net8.0/CoverletSourceRootsMapping_LibraryTests
+/Users/mateo/UCU/PII/pii_2024_2_equipo5/test/LibraryTests/bin/Debug/net8.0/Library.dll
+/Users/mateo/UCU/PII/pii_2024_2_equipo5/test/LibraryTests/bin/Debug/net8.0/Library.pdb

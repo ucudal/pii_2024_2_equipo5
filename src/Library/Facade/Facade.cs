@@ -28,11 +28,11 @@ public class Facade
     {
         if (nombreEntrenador == entrenador1.Nombre)
         {
-            entrenador1.Pokemons.Add(pokemon);
+            entrenador1.AgregarPokemon(pokemon);
         }
         else if (nombreEntrenador == entrenador2.Nombre)
         {
-            entrenador2.Pokemons.Add(pokemon);
+            entrenador2.AgregarPokemon(pokemon);
         }
         else
         {
