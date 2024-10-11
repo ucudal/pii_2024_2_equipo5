@@ -5,7 +5,7 @@ namespace Library.Movimientos.Normal;
 
 public class Placaje: IMovimiento
 {
-    public ETipos Tipos { get; } = ETipos.NORMAL;
+    public ETipos Tipo { get; } = ETipos.NORMAL;
         
     public string Nombre { get; } = "Placaje";
         

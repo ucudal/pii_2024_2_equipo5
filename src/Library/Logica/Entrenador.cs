@@ -1,87 +1,107 @@
 using System.Text;
 using Library.Interfaces;
 
-namespace Library.Logica;
-
-public class Entrenador
+namespace Library.Logica
 {
-    private string nombre;
-    public string Nombre
+    public class Entrenador
     {
-        get => nombre;
-        set => nombre = value;
-    }
-    
-    private List<IPokemon> pokemons;
-    public List<IPokemon> Pokemons
-    {
-        get => pokemons;
-        set => pokemons = value;
-    }
-    
-    private IPokemon pokemonActivo;
-    public IPokemon PokemonActivo
-    {
-        get => pokemonActivo;
-        set => pokemonActivo = value;
-    }
-    
-    private int contadorEspecial; 
-    public int ContadorEspecial
-    {
-        get => contadorEspecial;
-        set => contadorEspecial = value;
-    }
+        // Atributos privados
+        private string nombre;
+        private List<IPokemon> pokemons = new List<IPokemon>();
+        private IPokemon pokemonActivo;
+        private int contadorEspecial = 0;
 
-    public Entrenador(string nombre)
-    {
-        Nombre = nombre;
-        ContadorEspecial = 0;
-        Pokemons = new List<IPokemon>();
-        PokemonActivo = null;
-    }
-    
-    public string ObtenerStatusPokemon()
-    {
-        StringBuilder statusBuilder = new StringBuilder();       
-        foreach (var pokemon in pokemons)
+        // Getters y Setters públicos
+        public string Nombre
         {
-            statusBuilder.AppendLine($"{pokemon.Nombre}: {pokemon.SaludActual}/{pokemon.SaludTotal} HP");
+            get => nombre;
+            set => nombre = value;
         }
-        
-        return statusBuilder.ToString();
-    }
-    
-    public bool TienePokemonsRestantes()
-    {
-        foreach (var poke in pokemons)
+
+        public List<IPokemon> Pokemons
         {
-            if (!poke.Debil)
+            get => pokemons;
+            set => pokemons = value;
+        }
+
+        public IPokemon PokemonActivo
+        {
+            get => pokemonActivo;
+            set => pokemonActivo = value;
+        }
+
+        public int ContadorEspecial
+        {
+            get => contadorEspecial;
+            set => contadorEspecial = value;
+        }
+
+        // Constructor que inicializa el nombre del entrenador y otras propiedades.
+        public Entrenador(string nombre)
+        {
+            this.nombre = nombre;
+        }
+
+        // Método para obtener el estado de todos los Pokémon del entrenador.
+        public string ObtenerStatusPokemon()
+        {
+            StringBuilder statusBuilder = new StringBuilder();
+            foreach (var pokemon in pokemons)
             {
-                return true;
+                statusBuilder.AppendLine($"{pokemon.Nombre}: {pokemon.SaludActual}/{pokemon.SaludTotal} HP");
+            }
+
+            return statusBuilder.ToString();
+        }
+
+        // Verifica si el entrenador tiene algún Pokémon no debilitado.
+        public bool TienePokemonsRestantes()
+        {
+            foreach (var pokemon in pokemons)
+            {
+                if (!pokemon.Debil)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        // Verifica si el ataque especial está disponible.
+        public bool PuedeUsarAtaqueEspecial()
+        {
+            return contadorEspecial == 0;
+        }
+
+        // Método para disminuir el contador especial.
+        public void ActualizarContadorEspecial()
+        {
+            if (contadorEspecial > 0)
+            {
+                contadorEspecial--;
             }
         }
-        return false;
-    }
-    
-    public bool PuedeUsarAtaqueEspecial()
-    {
-        if (contadorEspecial == 0)
-        {
-            return true;
-        }
-    
-        return false; 
-    }
 
-    public Dictionary<IPokemon, List<IMovimiento>> VerAtaquesDisponibles()
-    {
-        Dictionary<IPokemon, List<IMovimiento>> ataquesDisponibles = new Dictionary<IPokemon, List<IMovimiento>>();
-        foreach (IPokemon pokemon in Pokemons)
+        // Cambia el Pokémon activo, si está en la lista de Pokémons.
+        public void EstablecerPokemonActivo(IPokemon nuevoPokemon)
         {
-            ataquesDisponibles.Add(pokemon, pokemon.Movimientos);
+            if (pokemons.Contains(nuevoPokemon))
+            {
+                pokemonActivo = nuevoPokemon;
+            }
         }
 
-        return ataquesDisponibles;
+        // Devuelve un diccionario donde cada Pokémon está asociado con su lista de movimientos.
+        public Dictionary<IPokemon, List<IMovimiento>> VerAtaquesDisponibles()
+        {
+            Dictionary<IPokemon, List<IMovimiento>> ataquesDisponibles = new Dictionary<IPokemon, List<IMovimiento>>();
+            foreach (IPokemon pokemon in pokemons)
+            {
+                ataquesDisponibles.Add(pokemon, pokemon.Movimientos);
+            }
+
+            return ataquesDisponibles;
+        }
     }
 }

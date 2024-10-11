@@ -5,7 +5,7 @@ namespace Library.Movimientos.Psiquico;
 
 public class Psiquico : IMovimiento
 {
-    public ETipos Tipos { get; } = ETipos.PSIQUICO;
+    public ETipos Tipo { get; } = ETipos.PSIQUICO;
         
     public string Nombre { get; } = "Psiquico";
         

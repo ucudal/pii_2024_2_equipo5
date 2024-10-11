@@ -5,7 +5,7 @@ namespace Library.Movimientos.Volador;
 
 public class Picotazo: IMovimiento
 {
-    public ETipos Tipos { get; } = ETipos.VOLADOR;
+    public ETipos Tipo { get; } = ETipos.VOLADOR;
         
     public string Nombre { get; } = "Picotazo";
         

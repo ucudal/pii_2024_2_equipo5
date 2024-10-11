@@ -5,7 +5,7 @@ namespace Library.Movimientos.Planta;
 
 public class HojaMagica: IMovimiento
 {
-    public ETipos Tipos { get; } = ETipos.PLANTA;
+    public ETipos Tipo { get; } = ETipos.PLANTA;
         
     public string Nombre { get; } = "Hoja Magica";
         

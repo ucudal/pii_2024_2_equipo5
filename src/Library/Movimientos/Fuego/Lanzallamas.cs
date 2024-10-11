@@ -5,7 +5,7 @@ namespace Library.Movimientos.Fuego;
 
 public class Lanzallamas: IMovimiento
 {
-    public ETipos Tipos { get; } = ETipos.FUEGO;
+    public ETipos Tipo { get; } = ETipos.FUEGO;
         
     public string Nombre { get; } = "Lanzallamas";
         
