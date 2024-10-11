@@ -5,7 +5,7 @@ namespace Library.Movimientos.Normal;
 
 public class Salpicadura: IMovimiento
 {
-    public ETipos Tipos { get; } = ETipos.NORMAL;
+    public ETipos Tipo { get; } = ETipos.NORMAL;
         
     public string Nombre { get; } = "Salpicadura";
         

@@ -2,7 +2,7 @@ namespace Library.Interfaces;
 
 public interface IMovimiento
 {
-    Enums.ETipos Tipos { get; }
+    Enums.ETipos Tipo { get; }
         
     string Nombre { get; }
     int Daño { get; }

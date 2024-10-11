@@ -5,7 +5,7 @@ namespace Library.Movimientos.Bicho;
 
 public class TijeraX: IMovimiento
 {
-    public ETipos Tipos { get; } = ETipos.BICHO;
+    public ETipos Tipo { get; } = ETipos.BICHO;
         
     public string Nombre { get; } = "Tijera X";
         

@@ -5,7 +5,7 @@ namespace Library.Movimientos.Agua;
 
 public class ShurikenDeAgua: IMovimiento
 {
-    public ETipos Tipos { get; } = ETipos.AGUA;
+    public ETipos Tipo { get; } = ETipos.AGUA;
         
     public string Nombre { get; } = "Shuriken de Agua";
         

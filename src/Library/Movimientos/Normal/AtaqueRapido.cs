@@ -5,7 +5,7 @@ namespace Library.Movimientos.Normal;
 
 public class AtaqueRapido: IMovimiento
 {
-    public ETipos Tipos { get; } = ETipos.NORMAL;
+    public ETipos Tipo { get; } = ETipos.NORMAL;
         
     public string Nombre { get; } = "Ataque Rapido";
         

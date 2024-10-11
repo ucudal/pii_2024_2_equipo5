@@ -5,7 +5,7 @@ namespace Library.Movimientos.Veneno;
 
 public class LanzaMugre: IMovimiento
 {
-    public ETipos Tipos { get; } = ETipos.VENENO;
+    public ETipos Tipo { get; } = ETipos.VENENO;
         
     public string Nombre { get; } = "Lanza Mugre";
         

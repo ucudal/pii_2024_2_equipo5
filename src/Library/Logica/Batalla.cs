@@ -5,11 +5,11 @@ namespace Library.Logica;
 
 public class Batalla
 {
-    private readonly Entrenador entrenador1;
-    private readonly Entrenador entrenador2;
-    private readonly Efectividad efectividad;
+    private Entrenador entrenador1;
+    private Entrenador entrenador2;
+    private Efectividad efectividad;
     private Entrenador entrenadorActual;
-    private readonly List<IPokemon> pokemonsDisponibles;
+    private List<IPokemon> pokemonsDisponibles;
     private int contadorTurno;
 
     public Batalla(Entrenador entrenador1, Entrenador entrenador2, Efectividad efectividad,
@@ -23,11 +23,23 @@ public class Batalla
         this.entrenadorActual = entrenador1;
     }
 
-    public Entrenador Entrenador1 => entrenador1;
+    public Entrenador Entrenador1
+    {
+        get => entrenador1;
+        set => entrenador1 = value;
+    }
 
-    public Entrenador Entrenador2 => entrenador2;
+    public Entrenador Entrenador2
+    {
+        get => entrenador2;
+        set => entrenador2 = value;
+    }
 
-    public Efectividad Efectividad => efectividad;
+    public Efectividad Efectividad
+    {
+        get => efectividad;
+        set => efectividad = value;
+    }
 
     public Entrenador EntrenadorActual
     {
@@ -35,7 +47,11 @@ public class Batalla
         private set => entrenadorActual = value;
     }
 
-    public List<IPokemon> PokemonsDisponibles => pokemonsDisponibles;
+    public List<IPokemon> PokemonsDisponibles
+    {
+        get => pokemonsDisponibles;
+        set => pokemonsDisponibles = value;
+    }
 
     public int ContadorTurno
     {
@@ -68,9 +84,6 @@ public class Batalla
         // Busca el movimiento que el atacante desea usar
         IMovimiento ataque = ObtenerMovimiento(entrenadorAtacante, movimiento);
 
-        // Si no se encontró el movimiento, salir del método
-        if (ataque == null) return;
-
         ActualizarContadoresEntrenador(entrenadorAtacante, ataque); // Actualiza los contadores del entrenador
         AplicarDanio(ataque, entrenadorDefensor); // Aplica el daño al defensor
     }
@@ -81,9 +94,12 @@ public class Batalla
         // Mostrar lista de Pokémon disponibles
 
         // Selecciona Pokémon de la lista disponible
-        for (int i = 0; i < cantidadPokemones && PokemonsDisponibles.Count > 0; i++)
+        for (int i = 0; i < cantidadPokemones; i++)
         {
-            IPokemon nuevoPokemon = PokemonsDisponibles.First(); // Toma el primer Pokémon disponible
+            IPokemon
+                nuevoPokemon =
+                    PokemonsDisponibles
+                        .First(); // Toma el primer Pokémon disponible por ahora (luego tiene que tomar el que elija el usuario)
             entrenador.Pokemons.Add(nuevoPokemon); // Agrega el Pokémon al entrenador
             pokemonsDisponibles.Remove(nuevoPokemon); // Lo elimina de la lista de disponibles
         }
@@ -102,6 +118,8 @@ public class Batalla
         if (PokemonsDisponibles.Count == 0) return; // Si no hay Pokémon disponibles, salir
 
         Console.WriteLine($"{entrenador.Nombre}, selecciona otro pokemon:");
+        // Mostrar lista de Pokémon disponibles
+
         IPokemon nuevoPokemon = PokemonsDisponibles.First(); // Toma el primer Pokémon disponible
         entrenador.PokemonActivo = nuevoPokemon; // Establece el nuevo Pokémon como activo
         PokemonsDisponibles.Remove(nuevoPokemon); // Elimina el Pokémon de la lista de disponibles
@@ -135,15 +153,16 @@ public class Batalla
 
     private IMovimiento ObtenerMovimiento(Entrenador entrenadorAtacante, IMovimiento movimiento)
     {
-        // Busca el movimiento en los movimientos del Pokémon activo del entrenador
-        return entrenadorAtacante.PokemonActivo.Movimientos.Find(f => f == movimiento);
+        // Busca el movimiento en los movimientos del Pokémon activo del entrenador, si no lo encuentra lanza la excepcion
+        return entrenadorAtacante.PokemonActivo.Movimientos.Find(f => f == movimiento)
+               ?? throw new InvalidOperationException("Movimiento no encontrado.");
     }
 
     private void AplicarDanio(IMovimiento ataque, Entrenador entrenadorDefensor)
     {
         // Calcula el daño considerando la efectividad del movimiento
         int danio = Convert.ToInt32(ataque.Daño *
-                                    Efectividad.ObtenerEfectividad(ataque.Tipos,
+                                    Efectividad.ObtenerEfectividad(ataque.Tipo,
                                         entrenadorDefensor.PokemonActivo.Tipo[0]));
 
         entrenadorDefensor.PokemonActivo.RecibirDanio(danio); // Aplica el daño al Pokémon defensor

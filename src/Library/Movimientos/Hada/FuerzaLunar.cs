@@ -5,7 +5,7 @@ namespace Library.Movimientos.Hada;
 
 public class FuerzaLunar: IMovimiento
 {
-    public ETipos Tipos { get; } = ETipos.HADA;
+    public ETipos Tipo { get; } = ETipos.HADA;
         
     public string Nombre { get; } = "Fuerza Lunar";
         

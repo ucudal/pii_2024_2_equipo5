@@ -5,7 +5,7 @@ namespace Library.Movimientos.Electrico;
 
 public class BolaVoltio: IMovimiento
 {
-    public ETipos Tipos { get; } = ETipos.ELECTRICO;
+    public ETipos Tipo { get; } = ETipos.ELECTRICO;
         
     public string Nombre { get; } = "Bola Voltio";
         
