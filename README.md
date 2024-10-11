@@ -46,3 +46,7 @@ Esta se encarga de atacar debido a que es la clase experta en cuanto a que conoc
 Creemos que cumple con el principio de inversión de dependencias **(DIP)** porque Batalla depende de abstracciones como IMovimiento, IPokemon. Es decir que no depende de implementaciones específicas, sino de abstracciones. 
 
 Esto mismo podemos decirlo de la clase Entrenador, que en este contexto hace que la clase sea fácil de modificar o reutilizar con diferentes implementaciones de Pokemon y Movimiento, sin cambiar la lógica de la clase Entrenador.
+
+## Recursos utilizados
+1. Para verificar que el programa cumpliera  con los principios SOLID, utilizamos el libro **Agile Principles, Patterns, and Practices in C#** de Robert C. Martin.
+2. Usamos también la página [Refactoring Guru](https://refactoring.guru) para la construcción de la fachada.
