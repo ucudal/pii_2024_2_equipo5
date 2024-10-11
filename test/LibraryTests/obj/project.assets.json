@@ -982,19 +982,19 @@
     ]
   },
   "packageFolders": {
-    "/Users/mateo/.nuget/packages/": {}
+    "/Users/eugeniaguibernau/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/test/LibraryTests/LibraryTests.csproj",
+      "projectUniqueName": "/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/test/LibraryTests/LibraryTests.csproj",
       "projectName": "LibraryTests",
-      "projectPath": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/test/LibraryTests/LibraryTests.csproj",
-      "packagesPath": "/Users/mateo/.nuget/packages/",
-      "outputPath": "/Users/mateo/UCU/PII/pii_2024_2_equipo5/test/LibraryTests/obj/",
+      "projectPath": "/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/test/LibraryTests/LibraryTests.csproj",
+      "packagesPath": "/Users/eugeniaguibernau/.nuget/packages/",
+      "outputPath": "/Users/eugeniaguibernau/Desktop/programacion2/pii_2024_2_equipo5/test/LibraryTests/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/mateo/.nuget/NuGet/NuGet.Config"
+        "/Users/eugeniaguibernau/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
