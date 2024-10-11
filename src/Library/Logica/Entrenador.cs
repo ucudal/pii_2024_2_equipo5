@@ -6,14 +6,40 @@ namespace Library.Logica;
 public class Entrenador
 {
     private string nombre;
+    public string Nombre
+    {
+        get => nombre;
+        set => nombre = value;
+    }
+    
     private List<IPokemon> pokemons;
+    public List<IPokemon> Pokemons
+    {
+        get => pokemons;
+        set => pokemons = value;
+    }
+    
     private IPokemon pokemonActivo;
-    private int contadorEspecial;
+    public IPokemon PokemonActivo
+    {
+        get => pokemonActivo;
+        set => pokemonActivo = value;
+    }
+    
+    private int contadorEspecial; 
+    public int ContadorEspecial
+    {
+        get => contadorEspecial;
+        set => contadorEspecial = value;
+    }
 
-    private List<IMovimiento> ataquesDisponibles;
-    //faltan getters y setters y constructor
-    
-    
+    public Entrenador(string nombre)
+    {
+        Nombre = nombre;
+        ContadorEspecial = 0;
+        Pokemons = new List<IPokemon>();
+        PokemonActivo = null;
+    }
     
     public string ObtenerStatusPokemon()
     {
@@ -25,6 +51,7 @@ public class Entrenador
         
         return statusBuilder.ToString();
     }
+    
     public bool TienePokemonsRestantes()
     {
         foreach (var poke in pokemons)
@@ -36,6 +63,7 @@ public class Entrenador
         }
         return false;
     }
+    
     public bool PuedeUsarAtaqueEspecial()
     {
         if (contadorEspecial == 0)
@@ -46,8 +74,14 @@ public class Entrenador
         return false; 
     }
 
-    public List<IMovimiento> VerAtaquesDisponibles()
+    public Dictionary<IPokemon, List<IMovimiento>> VerAtaquesDisponibles()
     {
-        return this.ataquesDisponibles;
+        Dictionary<IPokemon, List<IMovimiento>> ataquesDisponibles = new Dictionary<IPokemon, List<IMovimiento>>();
+        foreach (IPokemon pokemon in Pokemons)
+        {
+            ataquesDisponibles.Add(pokemon, pokemon.Movimientos);
+        }
+
+        return ataquesDisponibles;
     }
 }
