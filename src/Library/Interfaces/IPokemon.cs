@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using Library.Enums;
 
 namespace Library.Interfaces;
@@ -13,7 +12,7 @@ public interface IPokemon
     int ValorDefensa { get; set; }
     int ValorAtaqueEspecial { get; set; }
     int ValorDefensaEspecial { get; set; }
-    List<ETipos> Tipo { get; set; } 
+    List<ETipos> Tipo { get; set; }
     List<IMovimiento> Movimientos { get; set; }
     void RecibirDanio(int dañoRecibido);
     void UsarMovimiento(IMovimiento movimiento);

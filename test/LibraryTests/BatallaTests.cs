@@ -10,6 +10,10 @@ namespace LibraryTests
         private Entrenador entrenador1;
         private Entrenador entrenador2;
         private Efectividad efectividad;
+        private Pikachu pikachu;
+        private Charizard charizard;
+        private Blastoise blastoise;
+        private Dragonite dragonite;
         private List<IPokemon> pokemonsDisponibles;
 
         [SetUp]
@@ -18,7 +22,9 @@ namespace LibraryTests
             entrenador1 = new Entrenador("Ash");
             entrenador2 = new Entrenador("Misty");
             efectividad = new Efectividad();
-            pokemonsDisponibles = new List<IPokemon> { new Pikachu(), new Charizard() };
+            pikachu = new Pikachu();
+            charizard = new Charizard();
+            pokemonsDisponibles = new List<IPokemon> { pikachu, charizard };
         }
 
         [Test]
@@ -67,10 +73,14 @@ namespace LibraryTests
         public void IniciarBatalla_SeleccionaPokemonesParaAmbosEntrenadores()
         {
             var batalla = new Batalla(entrenador1, entrenador2, efectividad, pokemonsDisponibles);
+            entrenador1.Pokemons = new List<IPokemon> { pikachu, charizard };
+            entrenador1.PokemonActivo = new Pikachu();
+            entrenador2.Pokemons = new List<IPokemon> { blastoise, dragonite };
+            entrenador2.PokemonActivo = new Blastoise();
             batalla.IniciarBatalla();
 
-            Assert.That(entrenador1.Pokemons.Count, Is.EqualTo(1));
-            Assert.That(entrenador2.Pokemons.Count, Is.EqualTo(1));
+            Assert.That(entrenador1.Pokemons.Count, Is.EqualTo(0));
+            Assert.That(entrenador2.Pokemons.Count, Is.EqualTo(3));
         }
 
         [Test]
@@ -123,6 +133,7 @@ namespace LibraryTests
         {
             var batalla = new Batalla(entrenador1, entrenador2, efectividad, pokemonsDisponibles);
 
+            entrenador1.Pokemons = new List<IPokemon> { pikachu, charizard };
             entrenador1.PokemonActivo = new Pikachu();
             batalla.CambiarPokemon(entrenador1, 1);
 

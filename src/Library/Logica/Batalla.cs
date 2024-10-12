@@ -1,8 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Library.Interfaces;
-using Library.Movimientos.Fuego;
 
 namespace Library.Logica;
 
@@ -75,7 +71,7 @@ public class Batalla
         // Bucle principal de la batalla
         while (!Fin())
         {
-            Atacar(EntrenadorActual, new Ascuas()); // El entrenador actual ataca
+            Atacar(EntrenadorActual, entrenadorActual.PokemonActivo.Movimientos[0]); // El entrenador actual ataca
             SiguienteTurno(); // Cambia al siguiente turno
         }
     }
@@ -124,7 +120,7 @@ public class Batalla
         Console.WriteLine($"{entrenador.Nombre}, selecciona otro pokemon:");
         // Mostrar lista de Pokémon disponibles
 
-        IPokemon nuevoPokemon = PokemonsDisponibles[indexPokemon]; // Toma el primer Pokémon disponible
+        IPokemon nuevoPokemon = entrenador.Pokemons[indexPokemon]; // Toma el pokemon correspondiente al index
         entrenador.PokemonActivo = nuevoPokemon; // Establece el nuevo Pokémon como activo
         PokemonsDisponibles.Remove(nuevoPokemon); // Elimina el Pokémon de la lista de disponibles
     }
@@ -146,7 +142,7 @@ public class Batalla
     {
         // Establece el primer Pokémon de cada entrenador como activo
         Entrenador1.PokemonActivo = Entrenador1.Pokemons[0];
-        Entrenador2.PokemonActivo = Entrenador2.Pokemons[0];
+        Entrenador2.PokemonActivo = Entrenador2.Pokemons[2];
     }
 
     private Entrenador ObtenerEntrenadorDefensor(Entrenador entrenadorAtacante)
@@ -165,6 +161,21 @@ public class Batalla
 
     private void AplicarDanio(IMovimiento ataque, Entrenador entrenadorDefensor)
     {
+        if (ataque == null)
+        {
+            throw new ArgumentNullException(nameof(ataque), "El ataque no puede ser null.");
+        }
+
+        if (entrenadorDefensor == null)
+        {
+            throw new ArgumentNullException(nameof(entrenadorDefensor), "El entrenador defensor no puede ser null.");
+        }
+
+        if (entrenadorDefensor.PokemonActivo == null)
+        {
+            throw new InvalidOperationException("El entrenador defensor no tiene un Pokémon activo.");
+        }
+
         // Calcula el daño considerando la efectividad del movimiento
         int danio = Convert.ToInt32(ataque.Daño *
                                     Efectividad.ObtenerEfectividad(ataque.Tipo,
@@ -175,6 +186,7 @@ public class Batalla
         VerificarDebilidad(entrenadorDefensor,
             ObtenerEntrenadorDefensor(entrenadorDefensor)); // Verifica si el Pokémon defensor se ha debilitado
     }
+
 
     private void InformarDanio(IMovimiento ataque, Entrenador entrenadorDefensor, int danio)
     {
