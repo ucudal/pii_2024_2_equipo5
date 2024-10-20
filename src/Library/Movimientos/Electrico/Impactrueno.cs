@@ -1,26 +1,14 @@
 using Library.Enums;
-using Library.Interfaces;
+using Library.ClasesBase;
 
-namespace Library.Movimientos.Electrico;
-
-public class Impactrueno: IMovimiento
+namespace Library.Movimientos.Electrico
 {
-    public ETipos Tipo { get; } = ETipos.ELECTRICO;
-        
-    public string Nombre { get; } = "Impactrueno";
-        
-    public int Daño { get; } = 25;
-        
-    public int PP { get; } = 10;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = true;
-
-
-    public Impactrueno()
+    public class Impactrueno : Movimiento
     {
-        CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
+        public override ETipos Tipo { get; } = ETipos.ELECTRICO;
+        public override string Nombre { get; } = "Impactrueno";
+        public override int Daño { get; } = 55;
+        public override int PP { get; } = 10;
+        public override bool Especial { get; } = true;
     }
-
 }

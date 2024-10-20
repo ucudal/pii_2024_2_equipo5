@@ -1,5 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System;
+using Library.Facade;
+using Library.Logica; 
+using Library.Interfaces;
 
-using System;
 
-Console.WriteLine("Hello, World!");
+

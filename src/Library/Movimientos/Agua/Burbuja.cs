@@ -9,9 +9,9 @@ public class Burbuja: IMovimiento
 
     public string Nombre { get; } = "Burbuja";
         
-    public int Daño { get; } = 20;
+    public int Daño { get; } = 40;
         
-    public int PP { get; } = 15;
+    public int PP { get; } = 10;
         
     public int CurrentPP { get; set; }
         

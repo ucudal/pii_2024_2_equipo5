@@ -9,7 +9,7 @@ public class Picotazo: IMovimiento
         
     public string Nombre { get; } = "Picotazo";
         
-    public int Daño { get; } = 20;
+    public int Daño { get; } = 50;
         
     public int PP { get; } = 25;
         

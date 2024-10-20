@@ -9,7 +9,7 @@ public class HojaMagica: IMovimiento
         
     public string Nombre { get; } = "Hoja Magica";
         
-    public int Daño { get; } = 35;
+    public int Daño { get; } = 75;
         
     public int PP { get; } = 10;
         

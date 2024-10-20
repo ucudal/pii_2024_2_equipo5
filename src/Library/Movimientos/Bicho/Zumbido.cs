@@ -9,9 +9,9 @@ public class Zumbido: IMovimiento
         
     public string Nombre { get; } = "Zumbido";
         
-    public int Daño { get; } = 40;
+    public int Daño { get; } = 90;
         
-    public int PP { get; } = 10;
+    public int PP { get; } = 4;
         
     public int CurrentPP { get; set; }
         

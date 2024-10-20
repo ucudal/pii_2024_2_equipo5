@@ -1,26 +1,25 @@
-using Library.Enums;
+﻿using Library.Enums;
 using Library.Interfaces;
 
-namespace Library.Movimientos.Psiquico;
+namespace Library.Movimientos.Roca;
 
-public class Psicoonda: IMovimiento
+public class PoderPasado: IMovimiento
 {
-    public ETipos Tipo { get; } = ETipos.PSIQUICO;
+    public ETipos Tipo { get; } = ETipos.ROCA;
         
-    public string Nombre { get; } = "Psicoonda";
+    public string Nombre { get; } = "Poder Pasado";
         
     public int Daño { get; } = 65;
         
-    public int PP { get; } = 10;
+    public int PP { get; } = 15;
         
     public int CurrentPP { get; set; }
         
     public bool Especial { get; } = true;
 
 
-    public Psicoonda()
+    public PoderPasado()
     {
         CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }
-
 }

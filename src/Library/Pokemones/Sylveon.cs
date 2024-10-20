@@ -24,7 +24,7 @@ public class Sylveon : IPokemon
     {
         Nombre = "Sylveon";
 
-        SaludTotal = 115;
+        SaludTotal = 127;
         SaludActual = SaludTotal;
 
         ValorAtaque = 59;

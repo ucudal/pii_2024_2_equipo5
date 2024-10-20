@@ -9,7 +9,7 @@ public class LatigoCepa: IMovimiento
         
     public string Nombre { get; } = "Latigo Cepa";
         
-    public int Daño { get; } = 30;
+    public int Daño { get; } = 65;
         
     public int PP { get; } = 15;
         

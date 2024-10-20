@@ -9,7 +9,7 @@ public class Ascuas: IMovimiento
         
     public string Nombre { get; } = "Ascuas";
         
-    public int Daño { get; } = 25;
+    public int Daño { get; } = 40;
         
     public int PP { get; } = 20;
         

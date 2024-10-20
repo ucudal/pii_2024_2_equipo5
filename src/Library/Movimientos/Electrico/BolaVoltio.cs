@@ -9,7 +9,7 @@ public class BolaVoltio: IMovimiento
         
     public string Nombre { get; } = "Bola Voltio";
         
-    public int Daño { get; } = 40;
+    public int Daño { get; } = 70;
         
     public int PP { get; } = 10;
         

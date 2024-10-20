@@ -1,25 +1,14 @@
 using Library.Enums;
-using Library.Interfaces;
+using Library.ClasesBase;
 
-namespace Library.Movimientos.Fuego;
-
-public class Lanzallamas: IMovimiento
+namespace Library.Movimientos.Fuego
 {
-    public ETipos Tipo { get; } = ETipos.FUEGO;
-        
-    public string Nombre { get; } = "Lanzallamas";
-        
-    public int Daño { get; } = 40;
-        
-    public int PP { get; } = 10;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = true;
-
-
-    public Lanzallamas()
+    public class Lanzallamas : Movimiento
     {
-        CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
+        public override ETipos Tipo { get; } = ETipos.FUEGO;
+        public override string Nombre { get; } = "Lanzallamas";
+        public override int Daño { get; } = 80;
+        public override int PP { get; } = 10;
+        public override bool Especial { get; } = true;
     }
 }

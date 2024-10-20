@@ -25,7 +25,7 @@ public class Blastoise : IPokemon
     {
         Nombre = "Blastoise";
 
-        SaludTotal = 135;
+        SaludTotal = 150;
         SaludActual = SaludTotal;
 
         ValorAtaque = 55;

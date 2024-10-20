@@ -9,9 +9,9 @@ public class CargaToxica: IMovimiento
         
     public string Nombre { get; } = "Carga Toxica";
         
-    public int Daño { get; } = 40;
+    public int Daño { get; } = 65;
         
-    public int PP { get; } = 5;
+    public int PP { get; } = 15;
         
     public int CurrentPP { get; set; }
         

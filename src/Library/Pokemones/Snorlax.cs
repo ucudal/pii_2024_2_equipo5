@@ -23,7 +23,7 @@ public class Snorlax : IPokemon
     {
         Nombre = "Snorlax";
 
-        SaludTotal = 150;
+        SaludTotal = 165;
         SaludActual = SaludTotal;
 
         ValorAtaque = 30;

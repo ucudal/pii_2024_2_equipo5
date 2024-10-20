@@ -1,61 +1,39 @@
-using System;
 using System.Collections.Generic;
 using Library.Enums;
-using Library.Interfaces;
+using Library.ClasesBase;
 using Library.Movimientos.Dragon;
 using Library.Movimientos.Fuego;
-using Library.Movimientos.Volador;
+using Library.Movimientos.Electrico;
 
-namespace Library.Pokemones;
-
-public class Charizard : IPokemon
+namespace Library.Pokemones
 {
-    public string Nombre { get; set; }
-    public int SaludTotal { get; set; }
-    public int SaludActual { get; set; }
-    public int ValorAtaque { get; set; }
-    public int ValorDefensa { get; set; }
-    public int ValorAtaqueEspecial { get; set; }
-    public int ValorDefensaEspecial { get; set; }
-    public List<IMovimiento> Movimientos { get; set; }
-    public List<ETipos> Tipo { get; set; }
-
-
-    public Charizard()
+    public class Charizard : Pokemon
     {
-        Nombre = "Charizard";
-
-        SaludTotal = 130;
-        SaludActual = SaludTotal;
-
-        ValorAtaque = 58;
-        ValorDefensa = 43;
-        ValorAtaqueEspecial = 65;
-        ValorDefensaEspecial = 50;
-        Debil = false;
-
-        Movimientos = new List<IMovimiento> { new Lanzallamas(), new Vuelo(), new GarraDragon(), new PulsoDragon() };
-        Tipo = new List<ETipos> { ETipos.FUEGO, ETipos.VOLADOR };
-    }
-
-    public void RecibirDanio(int danio)
-    {
-        SaludActual = Math.Max(SaludActual - danio, 0);
-        if (SaludActual <= 0)
+        public Charizard()
         {
-            Debil = true;
+            Nombre = "Charizard";
+            SaludTotal = 145;
+            SaludActual = SaludTotal;
+            ValorAtaque = 58;
+            ValorDefensa = 43;
+            ValorAtaqueEspecial = 65;
+            ValorDefensaEspecial = 50;
+            Debil = false;
+
+            // Ahora solo se crean instancias de clases derivadas de Movimiento
+            Movimientos = new List<Movimiento>
+            {
+                new Lanzallamas(), 
+                new Vuelo(), 
+                new GarraDragon(), 
+                new Impactrueno() // Añadiendo el nuevo movimiento
+            };
+
+            Tipo = new List<ETipos>
+            {
+                ETipos.FUEGO, 
+                ETipos.VOLADOR 
+            };
         }
-    }
-
-    public bool Debil { get; set; }
-
-    public void UsarMovimiento(IMovimiento movimiento)
-    {
-        IMovimiento MovimientoUtilizado = Movimientos.Find(f => f == movimiento);
-
-        if (MovimientoUtilizado != null)
-        {
-            MovimientoUtilizado.CurrentPP -= 1;
-        } // Restamos 1 PP, ya que al usarlo se gasta.
     }
 }

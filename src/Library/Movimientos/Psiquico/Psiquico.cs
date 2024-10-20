@@ -9,7 +9,7 @@ public class Psiquico : IMovimiento
         
     public string Nombre { get; } = "Psiquico";
         
-    public int Daño { get; } = 45;
+    public int Daño { get; } = 85;
         
     public int PP { get; } = 5;
         

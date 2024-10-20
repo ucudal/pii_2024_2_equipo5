@@ -1,14 +1,14 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using Library.Enums;
 using Library.Interfaces;
-using Library.Movimientos.Dragon;
+using Library.Movimientos.Bicho;
 using Library.Movimientos.Normal;
-using Library.Movimientos.Volador;
+using Library.Movimientos.Psiquico;
 
 namespace Library.Pokemones;
 
-public class Dragonite : IPokemon
+public class Lucario : IPokemon
 {
     public string Nombre { get; set; }
     public int SaludTotal { get; set; }
@@ -21,21 +21,21 @@ public class Dragonite : IPokemon
     public List<ETipos> Tipo { get; set; }
 
 
-    public Dragonite()
+    public Lucario()
     {
-        Nombre = "Dragonite";
+        Nombre = "Lucario";
 
-        SaludTotal = 144;
+        SaludTotal = 132;
         SaludActual = SaludTotal;
 
-        ValorAtaque = 55;
-        ValorDefensa = 45;
-        ValorAtaqueEspecial = 63;
-        ValorDefensaEspecial = 55;
+        ValorAtaque = 58;
+        ValorDefensa = 44;
+        ValorAtaqueEspecial = 61;
+        ValorDefensaEspecial = 52;
         Debil = false;
 
-        Movimientos = new List<IMovimiento> { new Corte(), new Vuelo(), new GarraDragon(), new PulsoDragon() };
-        Tipo = new List<ETipos> { ETipos.DRAGON, ETipos.VOLADOR, ETipos.NORMAL };
+        Movimientos = new List<IMovimiento> { new Zumbido(), new Placaje(), new TijeraX(), new Psicoonda() };
+        Tipo = new List<ETipos> { ETipos.LUCHA, ETipos.ACERO };
     }
 
     public void RecibirDanio(int danio)

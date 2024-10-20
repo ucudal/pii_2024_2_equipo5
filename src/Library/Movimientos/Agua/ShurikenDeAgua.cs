@@ -11,7 +11,7 @@ public class ShurikenDeAgua: IMovimiento
         
     public int Daño { get; } = 20;
         
-    public int PP { get; } = 25;
+    public int PP { get; } = 10;
         
     public int CurrentPP { get; set; }
         

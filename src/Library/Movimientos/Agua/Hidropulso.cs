@@ -7,11 +7,11 @@ public class Hidropulso : IMovimiento
 {
     public ETipos Tipo { get; } = ETipos.AGUA;
         
-    public string Nombre { get; } = "Hidrobomba";
+    public string Nombre { get; } = "Hidropulso";
         
-    public int Daño { get; } = 50;
+    public int Daño { get; } = 60;
         
-    public int PP { get; } = 3;
+    public int PP { get; } = 5;
         
     public int CurrentPP { get; set; }
         

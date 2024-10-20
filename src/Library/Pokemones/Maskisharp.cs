@@ -23,7 +23,7 @@ public class Maskisharp : IPokemon
     {
         Nombre = "Mashikarp";
 
-        SaludTotal = 95;
+        SaludTotal = 110;
         SaludActual = SaludTotal;
 
         ValorAtaque = 25;

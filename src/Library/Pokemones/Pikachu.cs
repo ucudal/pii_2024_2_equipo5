@@ -24,7 +24,7 @@ public class Pikachu : IPokemon
     {
         Nombre = "Pikachu";
 
-        SaludTotal = 100;
+        SaludTotal = 120;
         SaludActual = SaludTotal;
 
         ValorAtaque = 50;

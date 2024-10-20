@@ -9,7 +9,7 @@ public class Confusion: IMovimiento
         
     public string Nombre { get; } = "Confusion";
         
-    public int Daño { get; } = 30;
+    public int Daño { get; } = 50;
         
     public int PP { get; } = 15;
         

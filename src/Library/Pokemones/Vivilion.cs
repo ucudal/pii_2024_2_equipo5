@@ -25,7 +25,7 @@ public class Vivilion : IPokemon
     {
         Nombre = "Vivillion";
 
-        SaludTotal = 109;
+        SaludTotal = 124;
         SaludActual = SaludTotal;
 
         ValorAtaque = 55;

@@ -176,16 +176,41 @@ public class Batalla
             throw new InvalidOperationException("El entrenador defensor no tiene un Pokémon activo.");
         }
 
-        // Calcula el daño considerando la efectividad del movimiento
-        int danio = Convert.ToInt32(ataque.Daño *
-                                    Efectividad.ObtenerEfectividad(ataque.Tipo,
-                                        entrenadorDefensor.PokemonActivo.Tipo[0]));
+        // Variables para almacenar estadísticas del Pokémon atacante y defensor
+        int ataqueStat;
+        int defensaStat;
 
-        entrenadorDefensor.PokemonActivo.RecibirDanio(danio); // Aplica el daño al Pokémon defensor
-        InformarDanio(ataque, entrenadorDefensor, danio); // Informa sobre el daño
-        VerificarDebilidad(entrenadorDefensor,
-            ObtenerEntrenadorDefensor(entrenadorDefensor)); // Verifica si el Pokémon defensor se ha debilitado
+        // Determina si el ataque es especial o físico
+        if (ataque.Especial)
+        {
+            // Si el ataque es especial, usa las estadísticas de ataque especial y defensa especial
+            ataqueStat = entrenadorActual.PokemonActivo.ValorAtaqueEspecial;
+            defensaStat = entrenadorDefensor.PokemonActivo.ValorDefensaEspecial;
+        }
+        else
+        {
+            // Si el ataque es físico, usa las estadísticas de ataque normal y defensa normal
+            ataqueStat = entrenadorActual.PokemonActivo.ValorAtaque;
+            defensaStat = entrenadorDefensor.PokemonActivo.ValorDefensa;
+        }
+
+        // Calcula el daño base utilizando las estadísticas adecuadas
+        int danioBase = Convert.ToInt32((ataque.Daño * ataqueStat) / defensaStat);
+
+        // Ajusta el daño base por la efectividad del ataque según los tipos de Pokémon
+        double efectividad = Efectividad.ObtenerEfectividad(ataque.Tipo, entrenadorDefensor.PokemonActivo.Tipo[0]);
+        int danioTotal = Convert.ToInt32(danioBase * efectividad);
+
+        // Aplica el daño al Pokémon defensor
+        entrenadorDefensor.PokemonActivo.RecibirDanio(danioTotal); 
+
+        // Informar sobre el daño infligido
+        InformarDanio(ataque, entrenadorDefensor, danioTotal); 
+
+        // Verifica si el Pokémon defensor se ha debilitado
+        VerificarDebilidad(entrenadorDefensor, ObtenerEntrenadorDefensor(entrenadorDefensor));
     }
+
 
 
     private void InformarDanio(IMovimiento ataque, Entrenador entrenadorDefensor, int danio)

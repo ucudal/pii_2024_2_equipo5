@@ -24,7 +24,7 @@ public class Gardevoir : IPokemon
     {
         Nombre = "Gardevoir";
 
-        SaludTotal = 120;
+        SaludTotal = 135;
         SaludActual = SaludTotal;
 
         ValorAtaque = 55;

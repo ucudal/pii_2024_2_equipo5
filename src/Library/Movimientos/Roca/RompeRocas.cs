@@ -1,24 +1,24 @@
-using Library.Enums;
+﻿using Library.Enums;
 using Library.Interfaces;
 
-namespace Library.Movimientos.Bicho;
+namespace Library.Movimientos.Roca;
 
-public class TijeraX: IMovimiento
+public class RompeRocas: IMovimiento
 {
-    public ETipos Tipo { get; } = ETipos.BICHO;
+    public ETipos Tipo { get; } = ETipos.ROCA;
         
-    public string Nombre { get; } = "Tijera X";
+    public string Nombre { get; } = "Rompe Rocas";
         
     public int Daño { get; } = 80;
         
-    public int PP { get; } = 6;
+    public int PP { get; } = 5;
         
     public int CurrentPP { get; set; }
         
     public bool Especial { get; } = false;
 
 
-    public TijeraX()
+    public RompeRocas()
     {
         CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }

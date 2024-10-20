@@ -1,5 +1,6 @@
 using System.Text;
 using Library.Interfaces;
+using Library.ClasesBase;              // Atentos que hay que estar con ojo.
 
 namespace Library.Logica
 {
@@ -93,9 +94,9 @@ namespace Library.Logica
         }
 
         // Devuelve un diccionario donde cada Pokémon está asociado con su lista de movimientos.
-        public Dictionary<IPokemon, List<IMovimiento>> VerAtaquesDisponibles()
+        public Dictionary<IPokemon, List<Movimiento>> VerAtaquesDisponibles()
         {
-            Dictionary<IPokemon, List<IMovimiento>> ataquesDisponibles = new Dictionary<IPokemon, List<IMovimiento>>();
+            Dictionary<IPokemon, List<Movimiento>> ataquesDisponibles = new Dictionary<IPokemon, List<Movimiento>>();
             foreach (IPokemon pokemon in pokemons)
             {
                 ataquesDisponibles.Add(pokemon, pokemon.Movimientos);

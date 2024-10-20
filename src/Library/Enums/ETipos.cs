@@ -5,88 +5,24 @@ namespace Library.Enums;
 
 public enum ETipos
 {
-    /// <summary>
-    /// Tipo fuego.
-    /// </summary>
     FUEGO,
-
-    /// <summary>
-    /// Tipo planta.
-    /// </summary>
-    PLANTA,
-
-    /// <summary>
-    /// Tipo agua.
-    /// </summary>
     AGUA,
-
-    /// <summary>
-    /// Tipo psiquico.
-    /// </summary>
-    PSIQUICO,
-
-    /// <summary>
-    /// Tipo electrico.
-    /// </summary>
+    PLANTA,
     ELECTRICO,
-
-    /// <summary>
-    /// Tipo bicho.
-    /// </summary>
-    BICHO,
-
-    /// <summary>
-    /// Tipo hada.
-    /// </summary>
     HADA,
-
-    /// <summary>
-    /// Tipo veneno.
-    /// </summary>
+    PSIQUICO,
     VENENO,
-
-    /// <summary>
-    /// Tipo normal.
-    /// </summary>
-    NORMAL,
-
-    /// <summary>
-    /// Tipo roca.
-    /// </summary>
-    ROCA,
-
-    /// <summary>
-    /// Tipo tierra.
-    /// </summary>
-    TIERRA,
-
-    /// <summary>
-    /// Tipo hielo.
-    /// </summary>
-    HIELO,
-
-    /// <summary>
-    /// Tipo siniestro.
-    /// </summary>
-    SINIESTRO,
-
-    /// <summary>
-    /// Tipo fantasma.
-    /// </summary>
-    FANTASMA,
-
-    /// <summary>
-    /// Tipo lucha.
-    /// </summary>
-    LUCHA,
-
-    /// <summary>
-    /// Tipo dragón.
-    /// </summary>
     DRAGON,
-
-    /// <summary>
-    /// Tipo volador.
-    /// </summary>
-    VOLADOR
+    NORMAL,
+    HIELO,
+    ACERO,
+    TIERRA,
+    ROCA,
+    SINIESTRO,
+    FANTASMA,
+    LUCHA,
+    BICHO,
+    VOLADOR,
+    
+    
 }

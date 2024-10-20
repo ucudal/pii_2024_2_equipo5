@@ -25,7 +25,7 @@ public class Venasaur : IPokemon
     {
         Nombre = "Venasaur";
 
-        SaludTotal = 130;
+        SaludTotal = 147;
         SaludActual = SaludTotal;
 
         ValorAtaque = 50;

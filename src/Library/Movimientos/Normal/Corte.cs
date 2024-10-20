@@ -9,7 +9,7 @@ public class Corte: IMovimiento
 
     public string Nombre { get; } = "Corte";
 
-    public int Daño { get; } = 18;
+    public int Daño { get; } = 30;
 
     public int PP { get; } = 25;
 

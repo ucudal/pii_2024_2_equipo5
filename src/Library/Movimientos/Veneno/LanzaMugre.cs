@@ -9,9 +9,9 @@ public class LanzaMugre: IMovimiento
         
     public string Nombre { get; } = "Lanza Mugre";
         
-    public int Daño { get; } = 45;
+    public int Daño { get; } = 70;
         
-    public int PP { get; } = 5;
+    public int PP { get; } = 10;
         
     public int CurrentPP { get; set; }
         

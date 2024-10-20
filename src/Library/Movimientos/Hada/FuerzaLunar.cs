@@ -9,7 +9,7 @@ public class FuerzaLunar: IMovimiento
         
     public string Nombre { get; } = "Fuerza Lunar";
         
-    public int Daño { get; } = 50;
+    public int Daño { get; } = 90;
         
     public int PP { get; } = 5;
         

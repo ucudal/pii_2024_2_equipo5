@@ -9,9 +9,9 @@ public class Hidrobomba : IMovimiento
         
     public string Nombre { get; } = "Hidrobomba";
         
-    public int Daño { get; } = 50;
+    public int Daño { get; } = 110;
         
-    public int PP { get; } = 3;
+    public int PP { get; } = 2;
         
     public int CurrentPP { get; set; }
         

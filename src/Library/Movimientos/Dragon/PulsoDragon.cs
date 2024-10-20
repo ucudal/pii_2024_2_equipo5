@@ -9,9 +9,9 @@ public class PulsoDragon : IMovimiento
         
     public string Nombre { get; } = "Pulso Dragon";
         
-    public int Daño { get; } = 40;
+    public int Daño { get; } = 85;
         
-    public int PP { get; } = 10;
+    public int PP { get; } = 3;
         
     public int CurrentPP { get; set; }
         

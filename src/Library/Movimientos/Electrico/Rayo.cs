@@ -9,7 +9,7 @@ public class Rayo: IMovimiento
         
     public string Nombre { get; } = "Rayo";
         
-    public int Daño { get; } = 45;
+    public int Daño { get; } = 85;
         
     public int PP { get; } = 5;
         
