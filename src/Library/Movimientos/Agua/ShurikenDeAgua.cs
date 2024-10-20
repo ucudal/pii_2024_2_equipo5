@@ -1,25 +1,14 @@
 using Library.Enums;
-using Library.Interfaces;
+using Library.ClasesBase;
 
-namespace Library.Movimientos.Agua;
-
-public class ShurikenDeAgua: IMovimiento
+namespace Library.Movimientos.Agua
 {
-    public ETipos Tipo { get; } = ETipos.AGUA;
-        
-    public string Nombre { get; } = "Shuriken de Agua";
-        
-    public int Daño { get; } = 20;
-        
-    public int PP { get; } = 10;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = false;
-
-
-    public ShurikenDeAgua()
+    public class ShurikenDeAgua : Movimiento
     {
-        CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
+        public override ETipos Tipo { get; } = ETipos.AGUA;
+        public override string Nombre { get; } = "Shuriken de agua";
+        public override int Daño { get; } = 25;
+        public override int PP { get; } = 5;
+        public override bool Especial { get; } = true;
     }
 }

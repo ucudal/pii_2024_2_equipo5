@@ -20,13 +20,11 @@ namespace Library.Pokemones
             ValorDefensaEspecial = 50;
             Debil = false;
 
-            // Ahora solo se crean instancias de clases derivadas de Movimiento
+            
             Movimientos = new List<Movimiento>
             {
                 new Lanzallamas(), 
-                new Vuelo(), 
-                new GarraDragon(), 
-                new Impactrueno() // Añadiendo el nuevo movimiento
+                new Impactrueno() 
             };
 
             Tipo = new List<ETipos>

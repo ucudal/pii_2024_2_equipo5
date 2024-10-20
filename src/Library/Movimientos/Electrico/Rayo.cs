@@ -1,26 +1,14 @@
 using Library.Enums;
-using Library.Interfaces;
+using Library.ClasesBase;
 
-namespace Library.Movimientos.Electrico;
-
-public class Rayo: IMovimiento
+namespace Library.Movimientos.Electrico
 {
-    public ETipos Tipo { get; } = ETipos.ELECTRICO;
-        
-    public string Nombre { get; } = "Rayo";
-        
-    public int Daño { get; } = 85;
-        
-    public int PP { get; } = 5;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = true;
-
-
-    public Rayo()
+    public class Rayo : Movimiento
     {
-        CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
+        public override ETipos Tipo { get; } = ETipos.ELECTRICO;
+        public override string Nombre { get; } = "Rayo";
+        public override int Daño { get; } = 90;
+        public override int PP { get; } = 3;
+        public override bool Especial { get; } = true;
     }
-
 }

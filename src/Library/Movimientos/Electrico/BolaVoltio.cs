@@ -1,25 +1,14 @@
 using Library.Enums;
-using Library.Interfaces;
+using Library.ClasesBase;
 
-namespace Library.Movimientos.Electrico;
-
-public class BolaVoltio: IMovimiento
+namespace Library.Movimientos.Electrico
 {
-    public ETipos Tipo { get; } = ETipos.ELECTRICO;
-        
-    public string Nombre { get; } = "Bola Voltio";
-        
-    public int Daño { get; } = 70;
-        
-    public int PP { get; } = 10;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = false;
-
-
-    public BolaVoltio()
+    public class BolaVoltio : Movimiento
     {
-        CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
+        public override ETipos Tipo { get; } = ETipos.ELECTRICO;
+        public override string Nombre { get; } = "Bola Voltio";
+        public override int Daño { get; } = 75;
+        public override int PP { get; } = 5;
+        public override bool Especial { get; } = true;
     }
 }

@@ -1,25 +1,14 @@
 using Library.Enums;
-using Library.Interfaces;
+using Library.ClasesBase;
 
-namespace Library.Movimientos.Agua;
-
-public class Hidropulso : IMovimiento
+namespace Library.Movimientos.Agua
 {
-    public ETipos Tipo { get; } = ETipos.AGUA;
-        
-    public string Nombre { get; } = "Hidropulso";
-        
-    public int Daño { get; } = 60;
-        
-    public int PP { get; } = 5;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = true;
-
-
-    public Hidropulso()
+    public class Hidropulso : Movimiento
     {
-        CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
+        public override ETipos Tipo { get; } = ETipos.AGUA;
+        public override string Nombre { get; } = "Hidropulso";
+        public override int Daño { get; } = 65;
+        public override int PP { get; } = 5;
+        public override bool Especial { get; } = true;
     }
 }

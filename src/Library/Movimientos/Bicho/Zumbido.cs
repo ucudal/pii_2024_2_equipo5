@@ -1,25 +1,14 @@
 using Library.Enums;
-using Library.Interfaces;
+using Library.ClasesBase;
 
-namespace Library.Movimientos.Bicho;
-
-public class Zumbido: IMovimiento
+namespace Library.Movimientos.Bicho
 {
-    public ETipos Tipo { get; } = ETipos.BICHO;
-        
-    public string Nombre { get; } = "Zumbido";
-        
-    public int Daño { get; } = 90;
-        
-    public int PP { get; } = 4;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = true;
-
-
-    public Zumbido()
+    public class Zumbido : Movimiento
     {
-        CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
+        public override ETipos Tipo { get; } = ETipos.BICHO;
+        public override string Nombre { get; } = "Zumbido";
+        public override int Daño { get; } = 90;
+        public override int PP { get; } = 4;
+        public override bool Especial { get; } = true;
     }
 }

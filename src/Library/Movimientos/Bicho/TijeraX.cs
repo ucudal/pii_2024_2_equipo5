@@ -1,25 +1,14 @@
 using Library.Enums;
-using Library.Interfaces;
+using Library.ClasesBase;
 
-namespace Library.Movimientos.Bicho;
-
-public class TijeraX: IMovimiento
+namespace Library.Movimientos.Bicho
 {
-    public ETipos Tipo { get; } = ETipos.BICHO;
-        
-    public string Nombre { get; } = "Tijera X";
-        
-    public int Daño { get; } = 80;
-        
-    public int PP { get; } = 6;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = false;
-
-
-    public TijeraX()
+    public class TijeraX : Movimiento
     {
-        CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
+        public override ETipos Tipo { get; } = ETipos.BICHO;
+        public override string Nombre { get; } = "Tijera X";
+        public override int Daño { get; } = 80;
+        public override int PP { get; } = 6;
+        public override bool Especial { get; } = false;
     }
 }
