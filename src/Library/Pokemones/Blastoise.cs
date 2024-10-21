@@ -35,7 +35,7 @@ public class Blastoise : IPokemon
         Debil = false;
 
         Movimientos = new List<IMovimiento> { new Hidrobomba(), new Hidropulso(), new Burbuja(), new Placaje() };
-        Tipo = new List<ETipos> { ETipos.AGUA, ETipos.NORMAL };
+        Tipo = new List<ETipos> { ETipos.AGUA };
     }
 
     public void RecibirDanio(int danio)

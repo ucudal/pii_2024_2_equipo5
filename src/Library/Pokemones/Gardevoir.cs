@@ -34,7 +34,7 @@ public class Gardevoir : IPokemon
         Debil = false;
 
         Movimientos = new List<IMovimiento> { new FuerzaLunar(), new Psiquico(), new Confusion() };
-        Tipo = new List<ETipos> { ETipos.PSIQUICO, ETipos.HADA };
+        Tipo = new List<ETipos> { ETipos.HADA };
     }
 
     public void RecibirDanio(int danio)

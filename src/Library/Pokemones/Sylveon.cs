@@ -34,7 +34,7 @@ public class Sylveon : IPokemon
         Debil = false;
 
         Movimientos = new List<IMovimiento> { new FuerzaLunar(), new AtaqueRapido(), new Placaje() };
-        Tipo = new List<ETipos> { ETipos.HADA, ETipos.NORMAL };
+        Tipo = new List<ETipos> { ETipos.HADA };
     }
 
     public void RecibirDanio(int danio)

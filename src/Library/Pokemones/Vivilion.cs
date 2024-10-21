@@ -35,7 +35,7 @@ public class Vivilion : IPokemon
         Debil = false;
 
         Movimientos = new List<IMovimiento> { new Zumbido(), new Placaje(), new TijeraX(), new Psicoonda() };
-        Tipo = new List<ETipos> { ETipos.BICHO, ETipos.PSIQUICO, ETipos.NORMAL };
+        Tipo = new List<ETipos> { ETipos.BICHO };
     }
 
     public void RecibirDanio(int danio)

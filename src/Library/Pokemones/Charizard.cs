@@ -35,7 +35,7 @@ public class Charizard : IPokemon
         Debil = false;
 
         Movimientos = new List<IMovimiento> { new Lanzallamas(), new Vuelo(), new GarraDragon(), new PulsoDragon() };
-        Tipo = new List<ETipos> { ETipos.FUEGO, ETipos.VOLADOR };
+        Tipo = new List<ETipos> { ETipos.FUEGO };
     }
 
     public void RecibirDanio(int danio)

@@ -34,7 +34,7 @@ public class Pikachu : IPokemon
         Debil = false;
 
         Movimientos = new List<IMovimiento> { new Impactrueno(), new AtaqueRapido(), new Rayo(), new BolaVoltio() };
-        Tipo = new List<ETipos> { ETipos.ELECTRICO, ETipos.NORMAL };
+        Tipo = new List<ETipos> { ETipos.ELECTRICO };
     }
 
     public void RecibirDanio(int danio)

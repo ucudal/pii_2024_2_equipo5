@@ -35,7 +35,7 @@ public class Venasaur : IPokemon
         Debil = false;
 
         Movimientos = new List<IMovimiento> { new LatigoCepa(), new HojaMagica(), new CargaToxica(), new Placaje() };
-        Tipo = new List<ETipos> { ETipos.PLANTA, ETipos.VENENO, ETipos.NORMAL };
+        Tipo = new List<ETipos> { ETipos.VENENO };
     }
 
     public void RecibirDanio(int danio)
