@@ -11,7 +11,7 @@ public class FuerzaLunar: IMovimiento
         
     public int Daño { get; } = 50;
         
-    public int PP { get; } = 5;
+    public int PP { get; } = 4;
         
     public int CurrentPP { get; set; }
         
