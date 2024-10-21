@@ -5,10 +5,11 @@ using Library.Interfaces;
 using Library.Movimientos.Normal;
 using Library.Movimientos.Planta;
 using Library.Movimientos.Veneno;
+using Library.ClasesBase;
 
 namespace Library.Pokemones;
 
-public class Venasaur : IPokemon
+public class Venasaur : Pokemon
 {
     public string Nombre { get; set; }
     public int SaludTotal { get; set; }

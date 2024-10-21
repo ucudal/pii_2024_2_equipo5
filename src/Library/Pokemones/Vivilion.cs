@@ -5,10 +5,11 @@ using Library.Interfaces;
 using Library.Movimientos.Bicho;
 using Library.Movimientos.Normal;
 using Library.Movimientos.Psiquico;
+using Library.ClasesBase;
 
 namespace Library.Pokemones;
 
-public class Vivilion : IPokemon
+public class Vivilion : Pokemon
 {
     public string Nombre { get; set; }
     public int SaludTotal { get; set; }

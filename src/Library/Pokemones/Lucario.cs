@@ -5,10 +5,11 @@ using Library.Interfaces;
 using Library.Movimientos.Bicho;
 using Library.Movimientos.Normal;
 using Library.Movimientos.Psiquico;
+using Library.ClasesBase;
 
 namespace Library.Pokemones;
 
-public class Lucario : IPokemon
+public class Lucario : Pokemon
 {
     public string Nombre { get; set; }
     public int SaludTotal { get; set; }

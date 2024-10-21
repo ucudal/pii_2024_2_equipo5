@@ -4,10 +4,11 @@ using Library.Enums;
 using Library.Interfaces;
 using Library.Movimientos.Hada;
 using Library.Movimientos.Psiquico;
+using Library.ClasesBase;
 
 namespace Library.Pokemones;
 
-public class Gardevoir : IPokemon
+public class Gardevoir : Pokemon
 {
     public string Nombre { get; set; }
     public int SaludTotal { get; set; }

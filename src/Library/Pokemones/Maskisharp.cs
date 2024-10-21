@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using Library.Enums;
 using Library.Interfaces;
 using Library.Movimientos.Normal;
+using Library.ClasesBase;
+using Library.ClasesBase;
 
 namespace Library.Pokemones;
 
-public class Maskisharp : IPokemon
+public class Maskisharp : Pokemon
 {
     public string Nombre { get; set; }
     public int SaludTotal { get; set; }

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Library.ClasesBase;
 using Library.Enums;
 using Library.Interfaces;
 using Library.Movimientos.Dragon;
@@ -8,7 +9,7 @@ using Library.Movimientos.Volador;
 
 namespace Library.Pokemones;
 
-public class Dragonite : IPokemon
+public class Dragonite : Pokemon
 {
     public string Nombre { get; set; }
     public int SaludTotal { get; set; }

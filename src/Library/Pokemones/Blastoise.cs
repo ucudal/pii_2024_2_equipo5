@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Library.ClasesBase;
 using Library.Enums;
 using Library.Interfaces;
 using Library.Movimientos.Agua;
@@ -7,7 +8,7 @@ using Library.Movimientos.Normal;
 
 namespace Library.Pokemones;
 
-public class Blastoise : IPokemon
+public class Blastoise : Pokemon 
 {
     public string Nombre { get; set; }
     public int SaludTotal { get; set; }

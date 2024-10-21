@@ -4,10 +4,11 @@ using Library.Enums;
 using Library.Interfaces;
 using Library.Movimientos.Hada;
 using Library.Movimientos.Normal;
+using Library.ClasesBase;
 
 namespace Library.Pokemones;
 
-public class Sylveon : IPokemon
+public class Sylveon : Pokemon
 {
     public string Nombre { get; set; }
     public int SaludTotal { get; set; }

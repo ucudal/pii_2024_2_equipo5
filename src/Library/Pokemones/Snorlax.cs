@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using Library.Enums;
 using Library.Interfaces;
 using Library.Movimientos.Normal;
+using Library.ClasesBase;
 
 namespace Library.Pokemones;
 
-public class Snorlax : IPokemon
+public class Snorlax : Pokemon
 {
     public string Nombre { get; set; }
     public int SaludTotal { get; set; }

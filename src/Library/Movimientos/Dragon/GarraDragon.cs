@@ -3,7 +3,7 @@ using Library.ClasesBase;
 
 namespace Library.Movimientos.Dragon
 {
-    public class GarraDragón : Movimiento
+    public class GarraDragon : Movimiento
     {
         public override ETipos Tipo { get; } = ETipos.DRAGON;
         public override string Nombre { get; } = "Garra Dragón";
