@@ -11,7 +11,7 @@ public class Psiquico : IMovimiento
         
     public int Daño { get; } = 45;
         
-    public int PP { get; } = 5;
+    public int PP { get; } = 4;
         
     public int CurrentPP { get; set; }
         

@@ -11,7 +11,7 @@ public class Zumbido: IMovimiento
         
     public int Daño { get; } = 40;
         
-    public int PP { get; } = 10;
+    public int PP { get; } = 4;
         
     public int CurrentPP { get; set; }
         

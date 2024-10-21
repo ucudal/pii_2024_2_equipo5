@@ -11,7 +11,7 @@ public class Confusion: IMovimiento
         
     public int Daño { get; } = 30;
         
-    public int PP { get; } = 15;
+    public int PP { get; } = 4;
         
     public int CurrentPP { get; set; }
         

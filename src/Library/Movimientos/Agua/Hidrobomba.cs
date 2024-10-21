@@ -11,7 +11,7 @@ public class Hidrobomba : IMovimiento
         
     public int Daño { get; } = 50;
         
-    public int PP { get; } = 3;
+    public int PP { get; } = 4;
         
     public int CurrentPP { get; set; }
         
