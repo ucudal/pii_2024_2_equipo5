@@ -10,6 +10,7 @@ public class Efectividad
         {
             ETipos.FUEGO, new Dictionary<ETipos, float>
             {
+                { ETipos.FUEGO, 0.5f },
                 { ETipos.PLANTA, 2.0f },
                 { ETipos.AGUA, 0.5f },
                 { ETipos.ROCA, 0.5f },
@@ -17,7 +18,7 @@ public class Efectividad
                 { ETipos.VENENO, 1.0f },
                 { ETipos.NORMAL, 1.0f },
                 { ETipos.BICHO, 2.0f },
-                { ETipos.DRAGON, 1.0f },
+                { ETipos.DRAGON, 0.5f },
                 { ETipos.HADA, 1.0f },
                 { ETipos.VOLADOR, 1.0f },
                 { ETipos.PSIQUICO, 1.0f },
@@ -25,6 +26,8 @@ public class Efectividad
                 { ETipos.FANTASMA, 1.0f },
                 { ETipos.TIERRA, 1.0f },
                 { ETipos.LUCHA, 1.0f },
+                { ETipos.ACERO, 2.0f },
+                { ETipos.ELECTRICO, 1.0f },
             }
         },
         {
@@ -32,8 +35,8 @@ public class Efectividad
             {
                 { ETipos.FUEGO, 0.5f },
                 { ETipos.AGUA, 2.0f },
-                { ETipos.ROCA, 1.0f },
-                { ETipos.HIELO, 1.0f },
+                { ETipos.ROCA, 2.0f },
+                { ETipos.HIELO, 0.5f },
                 { ETipos.VENENO, 0.5f },
                 { ETipos.NORMAL, 1.0f },
                 { ETipos.BICHO, 0.5f },
@@ -43,8 +46,11 @@ public class Efectividad
                 { ETipos.PSIQUICO, 1.0f },
                 { ETipos.SINIESTRO, 1.0f },
                 { ETipos.FANTASMA, 1.0f },
-                { ETipos.TIERRA, 1.0f },
+                { ETipos.TIERRA, 2.0f },
                 { ETipos.LUCHA, 1.0f },
+                { ETipos.ACERO, 1.0f },
+                { ETipos.ELECTRICO, 1.0f },
+                { ETipos.PLANTA, 1.0f},
             }
         },
         {
@@ -52,7 +58,7 @@ public class Efectividad
             {
                 { ETipos.FUEGO, 2.0f },
                 { ETipos.PLANTA, 0.5f },
-                { ETipos.ROCA, 1.0f },
+                { ETipos.ROCA, 2.0f },
                 { ETipos.HIELO, 1.0f },
                 { ETipos.VENENO, 1.0f },
                 { ETipos.NORMAL, 1.0f },
@@ -63,8 +69,11 @@ public class Efectividad
                 { ETipos.PSIQUICO, 1.0f },
                 { ETipos.SINIESTRO, 1.0f },
                 { ETipos.FANTASMA, 1.0f },
-                { ETipos.TIERRA, 1.0f },
+                { ETipos.TIERRA, 2.0f },
                 { ETipos.LUCHA, 1.0f },
+                { ETipos.ACERO, 1.0f },
+                { ETipos.ELECTRICO, 0.5f },
+                { ETipos.AGUA, 1.0f },
             }
         },
         {
@@ -73,81 +82,91 @@ public class Efectividad
                 { ETipos.FUEGO, 1.0f },
                 { ETipos.PLANTA, 1.0f },
                 { ETipos.AGUA, 1.0f },
-                { ETipos.BICHO, 1.0f },
-                { ETipos.VENENO, 1.0f },
-                { ETipos.NORMAL, 1.0f },
+                { ETipos.BICHO, 0.5f },
+                { ETipos.VENENO, 0.5f },
+                { ETipos.NORMAL, 2.0f },
                 { ETipos.DRAGON, 1.0f },
-                { ETipos.HADA, 1.0f },
+                { ETipos.HADA, 0.5f },
                 { ETipos.VOLADOR, 0.5f },
-                { ETipos.PSIQUICO, 1.0f },
+                { ETipos.PSIQUICO, 0.5f },
                 { ETipos.SINIESTRO, 2.0f },
-                { ETipos.FANTASMA, 0.5f },
+                { ETipos.FANTASMA, 0.0f },
                 { ETipos.ROCA, 2.0f },
                 { ETipos.TIERRA, 1.0f },
                 { ETipos.LUCHA, 1.0f },
-                { ETipos.HIELO, 2.0f }
+                { ETipos.HIELO, 2.0f },
+                { ETipos.ACERO, 2.0f },
+                { ETipos.ELECTRICO, 1.0f },
+                
             }
         },
         {
             ETipos.ROCA, new Dictionary<ETipos, float>
             {
-                { ETipos.FUEGO, 1.0f },
+                { ETipos.ROCA, 1.0f },
+                { ETipos.FUEGO, 2.0f },
                 { ETipos.PLANTA, 1.0f },
-                { ETipos.AGUA, 1.0f },
-                { ETipos.BICHO, 1.0f },
+                { ETipos.AGUA, 0.5f },
+                { ETipos.BICHO, 2.0f },
                 { ETipos.VENENO, 1.0f },
                 { ETipos.NORMAL, 1.0f },
                 { ETipos.DRAGON, 1.0f },
                 { ETipos.HADA, 1.0f },
-                { ETipos.VOLADOR, 1.0f },
+                { ETipos.VOLADOR, 2.0f },
                 { ETipos.PSIQUICO, 1.0f },
                 { ETipos.SINIESTRO, 1.0f },
                 { ETipos.FANTASMA, 1.0f },
-                { ETipos.TIERRA, 2.0f },
+                { ETipos.TIERRA, 0.5f },
                 { ETipos.LUCHA, 0.5f },
-                { ETipos.HIELO, 1.0f }
+                { ETipos.HIELO, 2.0f },
+                { ETipos.ACERO, 0.5f },
+                { ETipos.ELECTRICO, 1.0f },
             }
         },
         {
             ETipos.TIERRA, new Dictionary<ETipos, float>
             {
-                { ETipos.FUEGO, 1.0f },
-                { ETipos.PLANTA, 1.0f },
+                { ETipos.FUEGO, 2.0f },
+                { ETipos.PLANTA, 0.5f },
                 { ETipos.AGUA, 1.0f },
-                { ETipos.BICHO, 1.0f },
-                { ETipos.VENENO, 1.0f },
+                { ETipos.BICHO, 0.5f },
+                { ETipos.VENENO, 2.0f },
                 { ETipos.NORMAL, 1.0f },
                 { ETipos.DRAGON, 1.0f },
                 { ETipos.HADA, 1.0f },
-                { ETipos.VOLADOR, 1.0f },
+                { ETipos.VOLADOR, 0.0f },
                 { ETipos.PSIQUICO, 1.0f },
                 { ETipos.SINIESTRO, 1.0f },
                 { ETipos.FANTASMA, 1.0f },
-                { ETipos.ROCA, 0.5f },
+                { ETipos.ROCA, 2.0f },
                 { ETipos.TIERRA, 1.0f },
                 { ETipos.LUCHA, 1.0f },
-                { ETipos.HIELO, 1.0f }
+                { ETipos.HIELO, 1.0f },
+                { ETipos.ACERO, 2.0f },
+                { ETipos.ELECTRICO, 2.0f },
             }
         },
         {
             ETipos.HIELO, new Dictionary<ETipos, float>
             {
-                { ETipos.FUEGO, 1.0f },
+                { ETipos.FUEGO, 0.5f },
                 { ETipos.PLANTA, 1.0f },
-                { ETipos.AGUA, 1.0f },
+                { ETipos.AGUA, 0.5f },
                 { ETipos.BICHO, 1.0f },
                 { ETipos.VENENO, 1.0f },
                 { ETipos.NORMAL, 1.0f },
                 { ETipos.DRAGON, 2.0f },
                 { ETipos.HADA, 1.0f },
-                { ETipos.VOLADOR, 1.0f },
+                { ETipos.VOLADOR, 2.0f },
                 { ETipos.PSIQUICO, 1.0f },
                 { ETipos.SINIESTRO, 1.0f },
                 { ETipos.FANTASMA, 1.0f },
                 { ETipos.ROCA, 1.0f },
-                { ETipos.TIERRA, 1.0f },
+                { ETipos.TIERRA, 2.0f },
                 { ETipos.LUCHA, 0.5f },
-                { ETipos.HIELO, 1.0f }
+                { ETipos.HIELO, 0.5f },
+                { ETipos.ACERO, 0.5f },
+                { ETipos.ELECTRICO, 1.0f },
             }
         },
         {
@@ -164,11 +183,13 @@ public class Efectividad
                 { ETipos.LUCHA, 0.5f },
                 { ETipos.VOLADOR, 1.0f },
                 { ETipos.PSIQUICO, 2.0f },
-                { ETipos.SINIESTRO, 1.0f },
+                { ETipos.SINIESTRO, 0.5f },
                 { ETipos.FANTASMA, 2.0f },
                 { ETipos.ROCA, 1.0f },
                 { ETipos.TIERRA, 1.0f },
-                { ETipos.HIELO, 1.0f }
+                { ETipos.HIELO, 1.0f },
+                { ETipos.ACERO, 1.0f },
+                { ETipos.ELECTRICO, 1.0f },
             }
         },
         {
@@ -180,37 +201,41 @@ public class Efectividad
                 { ETipos.BICHO, 1.0f },
                 { ETipos.VENENO, 1.0f },
                 { ETipos.NORMAL, 1.0f },
-                { ETipos.DRAGON, 1.0f },
+                { ETipos.DRAGON, 0.0f },
                 { ETipos.HADA, 1.0f },
                 { ETipos.VOLADOR, 1.0f },
-                { ETipos.PSIQUICO, 1.0f },
-                { ETipos.SINIESTRO, 1.0f },
-                { ETipos.FANTASMA, 1.0f },
+                { ETipos.PSIQUICO, 2.0f },
+                { ETipos.SINIESTRO, 0.5f },
+                { ETipos.FANTASMA, 2.0f },
                 { ETipos.ROCA, 1.0f },
                 { ETipos.TIERRA, 1.0f },
                 { ETipos.LUCHA, 1.0f },
-                { ETipos.HIELO, 1.0f }
+                { ETipos.HIELO, 1.0f },
+                { ETipos.ACERO, 1.0f },
+                { ETipos.ELECTRICO, 1.0f },
             }
         },
         {
             ETipos.BICHO, new Dictionary<ETipos, float>
             {
                 { ETipos.FUEGO, 0.5f },
-                { ETipos.PLANTA, 1.0f },
+                { ETipos.PLANTA, 2.0f },
                 { ETipos.AGUA, 1.0f },
                 { ETipos.BICHO, 1.0f },
-                { ETipos.VENENO, 1.0f },
+                { ETipos.VENENO, 0.5f },
                 { ETipos.NORMAL, 1.0f },
                 { ETipos.DRAGON, 1.0f },
-                { ETipos.HADA, 1.0f },
+                { ETipos.HADA, 0.5f },
                 { ETipos.VOLADOR, 0.5f },
-                { ETipos.PSIQUICO, 1.0f },
-                { ETipos.SINIESTRO, 1.0f },
-                { ETipos.FANTASMA, 1.0f },
+                { ETipos.PSIQUICO, 2.0f },
+                { ETipos.SINIESTRO, 2.0f },
+                { ETipos.FANTASMA, 0.5f },
                 { ETipos.ROCA, 1.0f },
                 { ETipos.TIERRA, 1.0f },
-                { ETipos.LUCHA, 2.0f },
-                { ETipos.HIELO, 1.0f }
+                { ETipos.LUCHA, 0.5f },
+                { ETipos.HIELO, 1.0f },
+                { ETipos.ACERO, 0.5f },
+                { ETipos.ELECTRICO, 1.0f },
             }
         },
         {
@@ -223,7 +248,7 @@ public class Efectividad
                 { ETipos.VENENO, 1.0f },
                 { ETipos.NORMAL, 1.0f },
                 { ETipos.DRAGON, 2.0f },
-                { ETipos.HADA, 0.5f },
+                { ETipos.HADA, 0.0f },
                 { ETipos.VOLADOR, 1.0f },
                 { ETipos.PSIQUICO, 1.0f },
                 { ETipos.SINIESTRO, 1.0f },
@@ -231,28 +256,32 @@ public class Efectividad
                 { ETipos.ROCA, 1.0f },
                 { ETipos.TIERRA, 1.0f },
                 { ETipos.LUCHA, 1.0f },
-                { ETipos.HIELO, 1.0f }
+                { ETipos.HIELO, 1.0f },
+                { ETipos.ACERO, 0.5f },
+                { ETipos.ELECTRICO, 1.0f },
             }
         },
         {
             ETipos.HADA, new Dictionary<ETipos, float>
             {
-                { ETipos.FUEGO, 1.0f },
+                { ETipos.FUEGO, 0.5f },
                 { ETipos.PLANTA, 1.0f },
                 { ETipos.AGUA, 1.0f },
                 { ETipos.BICHO, 1.0f },
-                { ETipos.VENENO, 1.0f },
+                { ETipos.VENENO, 0.5f },
                 { ETipos.NORMAL, 1.0f },
-                { ETipos.DRAGON, 1.0f },
+                { ETipos.DRAGON, 2.0f },
                 { ETipos.HADA, 1.0f },
                 { ETipos.VOLADOR, 1.0f },
                 { ETipos.PSIQUICO, 1.0f },
-                { ETipos.SINIESTRO, 1.0f },
+                { ETipos.SINIESTRO, 2.0f },
                 { ETipos.FANTASMA, 1.0f },
                 { ETipos.ROCA, 1.0f },
                 { ETipos.TIERRA, 1.0f },
                 { ETipos.LUCHA, 2.0f },
-                { ETipos.HIELO, 1.0f }
+                { ETipos.HIELO, 2.0f },
+                { ETipos.ACERO, 0.5f },
+                { ETipos.ELECTRICO, 1.0f },
             }
         },
         {
@@ -262,30 +291,32 @@ public class Efectividad
                 { ETipos.PLANTA, 1.0f },
                 { ETipos.AGUA, 1.0f },
                 { ETipos.BICHO, 1.0f },
-                { ETipos.VENENO, 1.0f },
+                { ETipos.VENENO, 2.0f },
                 { ETipos.NORMAL, 1.0f },
                 { ETipos.DRAGON, 1.0f },
                 { ETipos.HADA, 1.0f },
                 { ETipos.VOLADOR, 1.0f },
-                { ETipos.PSIQUICO, 1.0f },
-                { ETipos.SINIESTRO, 1.0f },
+                { ETipos.PSIQUICO, 0.5f },
+                { ETipos.SINIESTRO, 0.0f },
                 { ETipos.FANTASMA, 1.0f },
                 { ETipos.ROCA, 1.0f },
                 { ETipos.TIERRA, 1.0f },
                 { ETipos.LUCHA, 2.0f },
-                { ETipos.HIELO, 1.0f }
+                { ETipos.HIELO, 1.0f },
+                { ETipos.ACERO, 0.5f },
+                { ETipos.ELECTRICO, 1.0f },
             }
         },
         {
             ETipos.ELECTRICO, new Dictionary<ETipos, float>
             {
                 { ETipos.FUEGO, 1.0f },
-                { ETipos.PLANTA, 1.0f },
+                { ETipos.PLANTA, 0.5f },
                 { ETipos.AGUA, 2.0f },
                 { ETipos.BICHO, 1.0f },
                 { ETipos.VENENO, 1.0f },
                 { ETipos.NORMAL, 1.0f },
-                { ETipos.DRAGON, 1.0f },
+                { ETipos.DRAGON, 0.5f },
                 { ETipos.HADA, 1.0f },
                 { ETipos.VOLADOR, 2.0f },
                 { ETipos.PSIQUICO, 1.0f },
@@ -293,7 +324,9 @@ public class Efectividad
                 { ETipos.FANTASMA, 1.0f },
                 { ETipos.ROCA, 1.0f },
                 { ETipos.TIERRA, 0.5f },
-                { ETipos.HIELO, 1.0f }
+                { ETipos.HIELO, 1.0f },
+                { ETipos.ACERO, 1.0f },
+                { ETipos.ELECTRICO, 0.5f },
             }
         },
         {
@@ -310,10 +343,12 @@ public class Efectividad
                 { ETipos.VOLADOR, 1.0f },
                 { ETipos.PSIQUICO, 0.5f },
                 { ETipos.SINIESTRO, 1.0f },
-                { ETipos.FANTASMA, 1.0f },
-                { ETipos.ROCA, 1.0f },
+                { ETipos.FANTASMA, 0.5f },
+                { ETipos.ROCA, 0.5f },
                 { ETipos.TIERRA, 0.5f },
-                { ETipos.HIELO, 1.0f }
+                { ETipos.HIELO, 1.0f },
+                { ETipos.ACERO, 0.0f },
+                { ETipos.ELECTRICO, 1.0f },
             }
         },
         {
@@ -330,18 +365,20 @@ public class Efectividad
                 { ETipos.VOLADOR, 1.0f },
                 { ETipos.PSIQUICO, 1.0f },
                 { ETipos.SINIESTRO, 1.0f },
-                { ETipos.FANTASMA, 0.0f }, // Sin efecto
+                { ETipos.FANTASMA, 0.0f },
                 { ETipos.ROCA, 0.5f },
                 { ETipos.TIERRA, 1.0f },
                 { ETipos.LUCHA, 0.5f },
-                { ETipos.HIELO, 1.0f }
+                { ETipos.HIELO, 1.0f },
+                { ETipos.ACERO, 0.5f },
+                { ETipos.ELECTRICO, 1.0f },
             }
         },
         {
             ETipos.VOLADOR, new Dictionary<ETipos, float>
             {
                 { ETipos.FUEGO, 1.0f },
-                { ETipos.PLANTA, 1.0f },
+                { ETipos.PLANTA, 2.0f },
                 { ETipos.AGUA, 1.0f },
                 { ETipos.BICHO, 2.0f },
                 { ETipos.VENENO, 1.0f },
@@ -355,7 +392,9 @@ public class Efectividad
                 { ETipos.ROCA, 0.5f },
                 { ETipos.TIERRA, 1.0f },
                 { ETipos.HIELO, 1.0f },
-                { ETipos.LUCHA, 2.0f }
+                { ETipos.LUCHA, 2.0f },
+                { ETipos.ACERO, 0.5f },
+                { ETipos.ELECTRICO, 0.5f },
             }
         },
     };
