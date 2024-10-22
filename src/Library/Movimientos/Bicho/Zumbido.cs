@@ -3,23 +3,14 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Bicho;
 
-public class Zumbido: IMovimiento
-{
-    public ETipos Tipo { get; } = ETipos.BICHO;
-        
-    public string Nombre { get; } = "Zumbido";
-        
-    public int Daño { get; } = 40;
-        
-    public int PP { get; } = 4;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = true;
-
-
+public class Zumbido: MovimientoEspecial
+{ 
     public Zumbido()
     {
+        Tipo = ETipos.BICHO;
+        Nombre = "Zumbido";
+        Daño = 40;
+        //los PP los hereda ya que para los especiales siempre es 4
         CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }
 }

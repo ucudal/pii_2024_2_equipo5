@@ -3,24 +3,14 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Planta;
 
-public class HojaMagica: IMovimiento
+public class HojaMagica: MovimientoEspecial
 {
-    public ETipos Tipo { get; } = ETipos.PLANTA;
-        
-    public string Nombre { get; } = "Hoja Magica";
-        
-    public int Daño { get; } = 35;
-        
-    public int PP { get; } = 4;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = true;
-
-
     public HojaMagica()
     {
+        Tipo = ETipos.PLANTA;
+        Nombre = "Hoja Mágica";
+        Daño = 35;
+        //los PP los hereda ya que para los especiales siempre es 4
         CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }
-
 }

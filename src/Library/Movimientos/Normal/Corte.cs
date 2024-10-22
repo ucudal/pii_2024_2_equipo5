@@ -3,23 +3,14 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Normal;
 
-public class Corte: IMovimiento
+public class Corte: MovimientoSimple
 {
-    public ETipos Tipo { get; } = ETipos.NORMAL;
-
-    public string Nombre { get; } = "Corte";
-
-    public int Daño { get; } = 18;
-
-    public int PP { get; } = 25;
-
-    public int CurrentPP { get; set; }
-
-    public bool Especial { get; } = false;
-
-
     public Corte()
     {
+        Tipo = ETipos.NORMAL;
+        Nombre = "Corte";
+        Daño = 18;
+        PP = 25;
         CurrentPP = PP; // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }
 }

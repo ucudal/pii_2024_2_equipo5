@@ -3,23 +3,14 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Normal;
 
-public class Placaje: IMovimiento
+public class Placaje: MovimientoSimple
 {
-    public ETipos Tipo { get; } = ETipos.NORMAL;
-        
-    public string Nombre { get; } = "Placaje";
-        
-    public int Daño { get; } = 25;
-        
-    public int PP { get; } = 15;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = false;
-
-
     public Placaje()
     {
+        Tipo = ETipos.NORMAL;
+        Nombre = "Placaje";
+        Daño = 25;
+        PP = 15;
         CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }
 

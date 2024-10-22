@@ -3,23 +3,14 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Fuego;
 
-public class Lanzallamas: IMovimiento
+public class Lanzallamas: MovimientoEspecial
 {
-    public ETipos Tipo { get; } = ETipos.FUEGO;
-        
-    public string Nombre { get; } = "Lanzallamas";
-        
-    public int Daño { get; } = 40;
-        
-    public int PP { get; } = 4;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = true;
-
-
     public Lanzallamas()
     {
+        Tipo = ETipos.FUEGO;
+        Nombre = "Lanzallamas";
+        Daño = 40;
+        //los PP los hereda ya que para los especiales siempre es 4
         CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }
 }

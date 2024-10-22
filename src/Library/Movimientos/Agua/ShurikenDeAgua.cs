@@ -3,23 +3,14 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Agua;
 
-public class ShurikenDeAgua: IMovimiento
+public class ShurikenDeAgua: MovimientoSimple
 {
-    public ETipos Tipo { get; } = ETipos.AGUA;
-        
-    public string Nombre { get; } = "Shuriken de Agua";
-        
-    public int Daño { get; } = 20;
-        
-    public int PP { get; } = 25;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = false;
-
-
     public ShurikenDeAgua()
     {
+        Tipo = ETipos.AGUA;
+        Nombre = "Shuriken de Agua";
+        Daño = 20;
+        PP = 25;
         CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }
 }

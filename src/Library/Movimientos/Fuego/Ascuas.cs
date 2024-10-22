@@ -3,23 +3,14 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Fuego;
 
-public class Ascuas: IMovimiento
+public class Ascuas: MovimientoSimple
 {
-    public ETipos Tipo { get; } = ETipos.FUEGO;
-        
-    public string Nombre { get; } = "Ascuas";
-        
-    public int Daño { get; } = 25;
-        
-    public int PP { get; } = 20;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = false;
-
-
     public Ascuas()
     {
+        ETipos Tipo = ETipos.FUEGO;
+        Nombre  = "Ascuas";
+        Daño = 25;
+        PP = 20;
         CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }
 }

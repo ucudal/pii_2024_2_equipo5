@@ -3,23 +3,14 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Volador;
 
-public class Picotazo: IMovimiento
-{
-    public ETipos Tipo { get; } = ETipos.VOLADOR;
-        
-    public string Nombre { get; } = "Picotazo";
-        
-    public int Daño { get; } = 20;
-        
-    public int PP { get; } = 25;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = false;
-
-
+public class Picotazo: MovimientoSimple
+{ 
     public Picotazo()
     {
+        Tipo = ETipos.VOLADOR;
+        Nombre = "Picotazo";
+        Daño = 20;
+        PP = 25;
         CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }
 }

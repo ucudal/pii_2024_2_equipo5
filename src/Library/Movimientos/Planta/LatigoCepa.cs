@@ -3,23 +3,14 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Planta;
 
-public class LatigoCepa: IMovimiento
+public class LatigoCepa: MovimientoSimple
 {
-    public ETipos Tipo { get; } = ETipos.PLANTA;
-        
-    public string Nombre { get; } = "Latigo Cepa";
-        
-    public int Daño { get; } = 30;
-        
-    public int PP { get; } = 15;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = false;
-
-
     public LatigoCepa()
     {
+        Tipo = ETipos.PLANTA;
+        Nombre = "Latigo Cepa";
+        Daño = 30;
+        PP = 15;
         CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }
 
