@@ -1,3 +1,4 @@
+using Library.Enums;
 using Library.Interfaces;
 
 namespace Library.Logica;
@@ -85,6 +86,14 @@ public class Batalla
 
         ActualizarContadoresEntrenador(entrenadorAtacante, ataque); // Actualiza los contadores del entrenador
         AplicarDanio(ataque, entrenadorDefensor); // Aplica el daño al defensor
+        if (ataque is MovimientoEspecial movimientoEspecial)
+        {
+            if (movimientoEspecial.AplicarEfecto(entrenadorDefensor.PokemonActivo))
+            {
+                Console.WriteLine($"{entrenadorDefensor.PokemonActivo.Nombre} ha sido afectado por {movimientoEspecial.Efecto}.");
+            }
+        }
+
     }
 
     public void SeleccionarPokemones(Entrenador entrenador, int cantidadPokemones)
@@ -129,6 +138,36 @@ public class Batalla
     {
         ContadorTurno++; // Incrementa el contador de turnos
         EntrenadorActual = ObtenerEntrenadorActual(); // Actualiza el entrenador actual
+    }
+    private void AplicarEfectosEstados(Entrenador entrenador)
+    {
+        IPokemon pokemonActivo = entrenador.PokemonActivo;
+
+        if (pokemonActivo.Estado == EEstado.ENVENENADO)
+        {
+            int danioVeneno = (int)(pokemonActivo.SaludTotal * 0.05);
+            pokemonActivo.RecibirDanio(danioVeneno);
+            Console.WriteLine($"{pokemonActivo.Nombre} sufre {danioVeneno} de daño por envenenamiento.");
+        }
+        else if (pokemonActivo.Estado == EEstado.QUEMADO)
+        {
+            int danioQuemadura = (int)(pokemonActivo.SaludTotal * 0.10);
+            pokemonActivo.RecibirDanio(danioQuemadura);
+            Console.WriteLine($"{pokemonActivo.Nombre} sufre {danioQuemadura} de daño por quemaduras.");
+        }
+        else if (pokemonActivo.Estado == EEstado.NORMAL)
+        {
+            if (pokemonActivo.TurnosDormido > 0)
+            {
+                pokemonActivo.TurnosDormido--;
+                Console.WriteLine($"{pokemonActivo.Nombre} sigue dormido.");
+            }
+            else
+            {
+                pokemonActivo.Estado = EEstado.NORMAL;
+                Console.WriteLine($"{pokemonActivo.Nombre} se ha despertado.");
+            }
+        }
     }
 
     public bool Fin()

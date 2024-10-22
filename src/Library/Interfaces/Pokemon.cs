@@ -14,6 +14,8 @@ public class Pokemon : IPokemon
     protected int valorDefensaEspecial;
     protected List<ETipos> tipo;
     protected List<IMovimiento> movimientos;
+    protected EEstado estado = EEstado.NORMAL; //Arranco siempre en normal
+    protected int turnosDormido = 0;
 
     public string Nombre
     {
@@ -75,6 +77,17 @@ public class Pokemon : IPokemon
         set => movimientos = value ?? throw new ArgumentNullException(nameof(value));
     }
 
+    public EEstado Estado
+    {
+        get => estado;
+        set => estado = value;
+    }
+
+    public int TurnosDormido
+    {
+        get => turnosDormido;
+        set => turnosDormido = value;
+    }
 
     public void RecibirDanio(int dañoRecibido)
     {

@@ -14,6 +14,8 @@ public interface IPokemon
     int ValorDefensaEspecial { get; set; }
     List<ETipos> Tipo { get; set; }
     List<IMovimiento> Movimientos { get; set; }
+    int TurnosDormido { get; set; }
+    EEstado Estado { get; set; }
     void RecibirDanio(int dañoRecibido);
     void UsarMovimiento(IMovimiento movimiento);
 }
