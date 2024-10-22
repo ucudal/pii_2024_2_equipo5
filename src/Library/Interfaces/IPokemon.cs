@@ -17,4 +17,8 @@ public interface IPokemon
     List<Movimiento> Movimientos { get; set; }
     void RecibirDanio(int dañoRecibido);
     void UsarMovimiento(IMovimiento movimiento);
+    
+    int Velocidad { get; set; }
+    
+    int Evasion { get; set; }
 }

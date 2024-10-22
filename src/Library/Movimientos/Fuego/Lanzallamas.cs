@@ -8,7 +8,9 @@ namespace Library.Movimientos.Fuego
         public override ETipos Tipo { get; } = ETipos.FUEGO;
         public override string Nombre { get; } = "Lanzallamas";
         public override int Daño { get; } = 80;
-        public override int PP { get; } = 10;
+        public override int PP { get; } = 4;
         public override bool Especial { get; } = true;
+
+        public override int Presicion { get; } = 100;
     }
 }

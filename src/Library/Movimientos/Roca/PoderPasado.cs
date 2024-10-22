@@ -1,25 +1,16 @@
 ﻿using Library.Enums;
-using Library.Interfaces;
+using Library.ClasesBase;
 
-namespace Library.Movimientos.Roca;
-
-public class PoderPasado: IMovimiento
+namespace Library.Movimientos.Roca
 {
-    public ETipos Tipo { get; } = ETipos.ROCA;
-        
-    public string Nombre { get; } = "Poder Pasado";
-        
-    public int Daño { get; } = 65;
-        
-    public int PP { get; } = 15;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = true;
-
-
-    public PoderPasado()
+    public class PoderPasado : Movimiento
     {
-        CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
+        public override ETipos Tipo { get; } = ETipos.ROCA;
+        public override string Nombre { get; } = "Poder pasado";
+        public override int Daño { get; } = 75;
+        public override int PP { get; } = 3;
+        public override bool Especial { get; } = true;
+        
+        public override int Presicion { get; } = 100;
     }
 }

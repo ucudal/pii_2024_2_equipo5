@@ -1,25 +1,16 @@
 ﻿using Library.Enums;
-using Library.Interfaces;
+using Library.ClasesBase;
 
-namespace Library.Movimientos.Roca;
-
-public class RompeRocas: IMovimiento
+namespace Library.Movimientos.Roca
 {
-    public ETipos Tipo { get; } = ETipos.ROCA;
-        
-    public string Nombre { get; } = "Rompe Rocas";
-        
-    public int Daño { get; } = 80;
-        
-    public int PP { get; } = 5;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = false;
-
-
-    public RompeRocas()
+    public class RompeRocas : Movimiento
     {
-        CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
+        public override ETipos Tipo { get; } = ETipos.ROCA;
+        public override string Nombre { get; } = "Rompe rocas";
+        public override int Daño { get; } = 80;
+        public override int PP { get; } = 6;
+        public override bool Especial { get; } = false;
+        
+        public override int Presicion { get; } = 90;
     }
 }

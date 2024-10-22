@@ -1,26 +1,16 @@
 using Library.Enums;
-using Library.Interfaces;
+using Library.ClasesBase;
 
-namespace Library.Movimientos.Normal;
-
-public class AtaqueRapido: IMovimiento
+namespace Library.Movimientos.Normal
 {
-    public ETipos Tipo { get; } = ETipos.NORMAL;
-        
-    public string Nombre { get; } = "Ataque Rapido";
-        
-    public int Daño { get; } = 50;
-        
-    public int PP { get; } = 20;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = false;
-
-
-    public AtaqueRapido()
+    public class AtaqueRapido : Movimiento
     {
-        CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
+        public override ETipos Tipo { get; } = ETipos.NORMAL;
+        public override string Nombre { get; } = "Ataque rápido";
+        public override int Daño { get; } = 50;
+        public override int PP { get; } = 10;
+        public override bool Especial { get; } = false;
+        
+        public override int Presicion { get; } = 100;
     }
-
 }

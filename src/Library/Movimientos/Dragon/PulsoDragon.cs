@@ -1,25 +1,16 @@
 using Library.Enums;
-using Library.Interfaces;
+using Library.ClasesBase;
 
-namespace Library.Movimientos.Dragon;
-
-public class PulsoDragon : IMovimiento
+namespace Library.Movimientos.Dragon
 {
-    public ETipos Tipo { get; } = ETipos.DRAGON;
-        
-    public string Nombre { get; } = "Pulso Dragon";
-        
-    public int Daño { get; } = 85;
-        
-    public int PP { get; } = 3;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = true;
-
-
-    public PulsoDragon()
+    public class PulsoDragon : Movimiento
     {
-        CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
+        public override ETipos Tipo { get; } = ETipos.DRAGON;
+        public override string Nombre { get; } = "Pulso Dragón";
+        public override int Daño { get; } = 85;
+        public override int PP { get; } = 4;
+        public override bool Especial { get; } = true;
+        
+        public override int Presicion { get; } = 95;
     }
 }

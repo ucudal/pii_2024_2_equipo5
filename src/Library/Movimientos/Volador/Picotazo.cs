@@ -1,25 +1,16 @@
 using Library.Enums;
-using Library.Interfaces;
+using Library.ClasesBase;
 
-namespace Library.Movimientos.Volador;
-
-public class Picotazo: IMovimiento
+namespace Library.Movimientos.Volador
 {
-    public ETipos Tipo { get; } = ETipos.VOLADOR;
-        
-    public string Nombre { get; } = "Picotazo";
-        
-    public int Daño { get; } = 50;
-        
-    public int PP { get; } = 25;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = false;
-
-
-    public Picotazo()
+    public class Picotazo : Movimiento
     {
-        CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
+        public override ETipos Tipo { get; } = ETipos.VOLADOR;
+        public override string Nombre { get; } = "Picotazo";
+        public override int Daño { get; } = 50;
+        public override int PP { get; } = 10;
+        public override bool Especial { get; } = false;
+        
+        public override int Presicion { get; } = 100;
     }
 }

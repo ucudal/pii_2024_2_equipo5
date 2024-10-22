@@ -10,5 +10,7 @@ namespace Library.Movimientos.Electrico
         public override int Daño { get; } = 100;
         public override int PP { get; } = 2;
         public override bool Especial { get; } = false;
+
+        public override int Presicion { get; } = 95;
     }
 }

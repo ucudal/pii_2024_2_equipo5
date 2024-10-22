@@ -1,26 +1,16 @@
 using Library.Enums;
-using Library.Interfaces;
+using Library.ClasesBase;
 
-namespace Library.Movimientos.Normal;
-
-public class Salpicadura: IMovimiento
+namespace Library.Movimientos.Normal
 {
-    public ETipos Tipo { get; } = ETipos.NORMAL;
-        
-    public string Nombre { get; } = "Salpicadura";
-        
-    public int Daño { get; } = 0;
-        
-    public int PP { get; } = 25;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = false;
-
-
-    public Salpicadura()
+    public class Salpicadura : Movimiento
     {
-        CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
+        public override ETipos Tipo { get; } = ETipos.NORMAL;
+        public override string Nombre { get; } = "Salpicadura";
+        public override int Daño { get; } = 0;
+        public override int PP { get; } = 12;
+        public override bool Especial { get; } = false;
+        
+        public override int Presicion { get; } = 100;
     }
-
 }

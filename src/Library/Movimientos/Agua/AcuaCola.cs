@@ -10,5 +10,7 @@ namespace Library.Movimientos.Agua
         public override int Daño { get; } = 90;
         public override int PP { get; } = 3;
         public override bool Especial { get; } = false;
+        
+        public override int Presicion { get; } = 95;
     }
 }

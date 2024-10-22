@@ -8,7 +8,9 @@ namespace Library.Movimientos.Electrico
         public override ETipos Tipo { get; } = ETipos.ELECTRICO;
         public override string Nombre { get; } = "Bola Voltio";
         public override int Daño { get; } = 75;
-        public override int PP { get; } = 5;
+        public override int PP { get; } = 4;
         public override bool Especial { get; } = true;
+
+        public override int Presicion { get; } = 95;
     }
 }

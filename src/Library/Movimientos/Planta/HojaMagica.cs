@@ -1,26 +1,16 @@
 using Library.Enums;
-using Library.Interfaces;
+using Library.ClasesBase;
 
-namespace Library.Movimientos.Planta;
-
-public class HojaMagica: IMovimiento
+namespace Library.Movimientos.Planta
 {
-    public ETipos Tipo { get; } = ETipos.PLANTA;
-        
-    public string Nombre { get; } = "Hoja Magica";
-        
-    public int Daño { get; } = 75;
-        
-    public int PP { get; } = 10;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = true;
-
-
-    public HojaMagica()
+    public class HojaMagica : Movimiento
     {
-        CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
+        public override ETipos Tipo { get; } = ETipos.PLANTA;
+        public override string Nombre { get; } = "Hoja mágica";
+        public override int Daño { get; } = 65;
+        public override int PP { get; } = 4;
+        public override bool Especial { get; } = true;
+        
+        public override int Presicion { get; } = 100;
     }
-
 }

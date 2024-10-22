@@ -1,26 +1,16 @@
 using Library.Enums;
-using Library.Interfaces;
+using Library.ClasesBase;
 
-namespace Library.Movimientos.Hada;
-
-public class FuerzaLunar: IMovimiento
+namespace Library.Movimientos.Hada
 {
-    public ETipos Tipo { get; } = ETipos.HADA;
-        
-    public string Nombre { get; } = "Fuerza Lunar";
-        
-    public int Daño { get; } = 90;
-        
-    public int PP { get; } = 5;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = true;
-
-
-    public FuerzaLunar()
+    public class FuerzaLunar : Movimiento
     {
-        CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
+        public override ETipos Tipo { get; } = ETipos.HADA;
+        public override string Nombre { get; } = "Fuerza Lunar";
+        public override int Daño { get; } = 100;
+        public override int PP { get; } = 3;
+        public override bool Especial { get; } = true;
+        
+        public override int Presicion { get; } = 100;
     }
-
 }

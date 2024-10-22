@@ -1,25 +1,16 @@
 using Library.Enums;
-using Library.Interfaces;
+using Library.ClasesBase;
 
-namespace Library.Movimientos.Veneno;
-
-public class LanzaMugre: IMovimiento
+namespace Library.Movimientos.Veneno
 {
-    public ETipos Tipo { get; } = ETipos.VENENO;
-        
-    public string Nombre { get; } = "Lanza Mugre";
-        
-    public int Daño { get; } = 70;
-        
-    public int PP { get; } = 10;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = false;
-
-
-    public LanzaMugre()
+    public class LanzaMugre : Movimiento
     {
-        CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
-    }  
+        public override ETipos Tipo { get; } = ETipos.VENENO;
+        public override string Nombre { get; } = "Lanza mugre";
+        public override int Daño { get; } = 120;
+        public override int PP { get; } = 2;
+        public override bool Especial { get; } = false;
+        
+        public override int Presicion { get; } = 85;
+    }
 }

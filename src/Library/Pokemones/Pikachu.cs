@@ -1,6 +1,8 @@
+using System.Collections.Generic;
 using Library.Enums;
 using Library.ClasesBase;
 using Library.Movimientos.Electrico;
+using Library.Movimientos.Normal;
 
 namespace Library.Pokemones
 {
@@ -9,24 +11,28 @@ namespace Library.Pokemones
         public Pikachu()
         {
             Nombre = "Pikachu";
-            SaludTotal = 145;
+            SaludTotal = 119;
             SaludActual = SaludTotal;
-            ValorAtaque = 58;
+            ValorAtaque = 56;
             ValorDefensa = 43;
-            ValorAtaqueEspecial = 65;
-            ValorDefensaEspecial = 50;
+            ValorAtaqueEspecial = 63;
+            ValorDefensaEspecial = 46;
+            Velocidad = 107;
+            Evasion = 25;
             Debil = false;
 
             
             Movimientos = new List<Movimiento>
             {
-                new Rayo(), 
-                new Impactrueno() 
+                new AtaqueRapido(),
+                new BolaVoltio(),
+                new Impactrueno(),
+                new Rayo()
             };
 
             Tipo = new List<ETipos>
             {
-                ETipos.ELECTRICO
+                ETipos.ELECTRICO, 
             };
         }
     }

@@ -1,61 +1,42 @@
-using System;
 using System.Collections.Generic;
 using Library.Enums;
-using Library.Interfaces;
-using Library.Movimientos.Normal;
+using Library.ClasesBase;
+using Library.Movimientos.Dragon;
+using Library.Movimientos.Fuego;
 using Library.Movimientos.Planta;
 using Library.Movimientos.Veneno;
+using Library.Movimientos.Volador;
 
-namespace Library.Pokemones;
-
-public class Venasaur : IPokemon
+namespace Library.Pokemones
 {
-    public string Nombre { get; set; }
-    public int SaludTotal { get; set; }
-    public int SaludActual { get; set; }
-    public int ValorAtaque { get; set; }
-    public int ValorDefensa { get; set; }
-    public int ValorAtaqueEspecial { get; set; }
-    public int ValorDefensaEspecial { get; set; }
-    public List<IMovimiento> Movimientos { get; set; }
-    public List<ETipos> Tipo { get; set; }
-
-
-    public Venasaur()
+    public class Venasaur : Pokemon
     {
-        Nombre = "Venasaur";
-
-        SaludTotal = 147;
-        SaludActual = SaludTotal;
-
-        ValorAtaque = 50;
-        ValorDefensa = 55;
-        ValorAtaqueEspecial = 50;
-        ValorDefensaEspecial = 60;
-        Debil = false;
-
-        Movimientos = new List<IMovimiento> { new LatigoCepa(), new HojaMagica(), new CargaToxica(), new Placaje() };
-        Tipo = new List<ETipos> { ETipos.PLANTA, ETipos.VENENO, ETipos.NORMAL };
-    }
-
-    public void RecibirDanio(int danio)
-    {
-        SaludActual = Math.Max(SaludActual - danio, 0);
-        if (SaludActual <= 0)
+        public Venasaur()
         {
-            Debil = true;
+            Nombre = "Venasaur";
+            SaludTotal = 146;
+            SaludActual = SaludTotal;
+            ValorAtaque = 60;
+            ValorDefensa = 52;
+            ValorAtaqueEspecial = 64;
+            ValorDefensaEspecial = 56;
+            Velocidad = 91;
+            Evasion = 6;
+            Debil = false;
+
+            
+            Movimientos = new List<Movimiento>
+            {
+                new LatigoCepa(),
+                new HojaMagica(),
+                new Eructo(),
+                new CargaToxica(),
+            };
+
+            Tipo = new List<ETipos>
+            {
+                ETipos.PLANTA, 
+            };
         }
-    }
-
-    public bool Debil { get; set; }
-
-    public void UsarMovimiento(IMovimiento movimiento)
-    {
-        IMovimiento MovimientoUtilizado = Movimientos.Find(f => f == movimiento);
-
-        if (MovimientoUtilizado != null)
-        {
-            MovimientoUtilizado.CurrentPP -= 1;
-        } // Restamos 1 PP, ya que al usarlo se gasta.
     }
 }

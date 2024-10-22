@@ -8,7 +8,9 @@ namespace Library.Movimientos.Agua
         public override ETipos Tipo { get; } = ETipos.AGUA;
         public override string Nombre { get; } = "Hidropulso";
         public override int Daño { get; } = 65;
-        public override int PP { get; } = 5;
+        public override int PP { get; } = 4;
         public override bool Especial { get; } = true;
+        
+        public override int Presicion { get; } = 95;
     }
 }

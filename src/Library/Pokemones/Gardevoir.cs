@@ -1,60 +1,40 @@
-using System;
 using System.Collections.Generic;
 using Library.Enums;
-using Library.Interfaces;
+using Library.ClasesBase;
+using Library.Movimientos.Fantasma;
 using Library.Movimientos.Hada;
 using Library.Movimientos.Psiquico;
 
-namespace Library.Pokemones;
-
-public class Gardevoir : IPokemon
+namespace Library.Pokemones
 {
-    public string Nombre { get; set; }
-    public int SaludTotal { get; set; }
-    public int SaludActual { get; set; }
-    public int ValorAtaque { get; set; }
-    public int ValorDefensa { get; set; }
-    public int ValorAtaqueEspecial { get; set; }
-    public int ValorDefensaEspecial { get; set; }
-    public List<IMovimiento> Movimientos { get; set; }
-    public List<ETipos> Tipo { get; set; }
-
-
-    public Gardevoir()
+    public class Gardevoir : Pokemon
     {
-        Nombre = "Gardevoir";
-
-        SaludTotal = 135;
-        SaludActual = SaludTotal;
-
-        ValorAtaque = 55;
-        ValorDefensa = 40;
-        ValorAtaqueEspecial = 70;
-        ValorDefensaEspecial = 50;
-        Debil = false;
-
-        Movimientos = new List<IMovimiento> { new FuerzaLunar(), new Psiquico(), new Confusion() };
-        Tipo = new List<ETipos> { ETipos.PSIQUICO, ETipos.HADA };
-    }
-
-    public void RecibirDanio(int danio)
-    {
-        SaludActual = Math.Max(SaludActual - danio, 0);
-        if (SaludActual <= 0)
+        public Gardevoir()
         {
-            Debil = true;
+            Nombre = "Gardevoir";
+            SaludTotal = 139;
+            SaludActual = SaludTotal;
+            ValorAtaque = 58;
+            ValorDefensa = 43;
+            ValorAtaqueEspecial = 72;
+            ValorDefensaEspecial = 46;
+            Velocidad = 101;
+            Evasion = 35;
+            Debil = false;
+
+            
+            Movimientos = new List<Movimiento>
+            {
+                new FuerzaLunar(),
+                new Psiquico(),
+                new CabezazoZen(),
+                new BolaSombra()
+            };
+
+            Tipo = new List<ETipos>
+            {
+                ETipos.PSIQUICO, 
+            };
         }
-    }
-
-    public bool Debil { get; set; }
-
-    public void UsarMovimiento(IMovimiento movimiento)
-    {
-        IMovimiento MovimientoUtilizado = Movimientos.Find(f => f == movimiento);
-
-        if (MovimientoUtilizado != null)
-        {
-            MovimientoUtilizado.CurrentPP -= 1;
-        } // Restamos 1 PP, ya que al usarlo se gasta.
     }
 }

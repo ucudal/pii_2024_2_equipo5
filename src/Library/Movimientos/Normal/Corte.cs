@@ -1,25 +1,16 @@
 using Library.Enums;
-using Library.Interfaces;
+using Library.ClasesBase;
 
-namespace Library.Movimientos.Normal;
-
-public class Corte: IMovimiento
+namespace Library.Movimientos.Normal
 {
-    public ETipos Tipo { get; } = ETipos.NORMAL;
-
-    public string Nombre { get; } = "Corte";
-
-    public int Daño { get; } = 30;
-
-    public int PP { get; } = 25;
-
-    public int CurrentPP { get; set; }
-
-    public bool Especial { get; } = false;
-
-
-    public Corte()
+    public class Corte : Movimiento
     {
-        CurrentPP = PP; // Esto es para inicializar la cantidad veces que podes usar un movimiento.
+        public override ETipos Tipo { get; } = ETipos.NORMAL;
+        public override string Nombre { get; } = "Corte";
+        public override int Daño { get; } = 55;
+        public override int PP { get; } = 8;
+        public override bool Especial { get; } = false;
+        
+        public override int Presicion { get; } = 100;
     }
 }

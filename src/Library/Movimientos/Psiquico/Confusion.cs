@@ -1,25 +1,16 @@
 using Library.Enums;
-using Library.Interfaces;
+using Library.ClasesBase;
 
-namespace Library.Movimientos.Psiquico;
-
-public class Confusion: IMovimiento
+namespace Library.Movimientos.Psiquico
 {
-    public ETipos Tipo { get; } = ETipos.PSIQUICO;
-        
-    public string Nombre { get; } = "Confusion";
-        
-    public int Daño { get; } = 50;
-        
-    public int PP { get; } = 15;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = true;
-
-
-    public Confusion()
+    public class Confusion : Movimiento
     {
-        CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
+        public override ETipos Tipo { get; } = ETipos.PSIQUICO;
+        public override string Nombre { get; } = "Confusión";
+        public override int Daño { get; } = 55;
+        public override int PP { get; } = 4;
+        public override bool Especial { get; } = true;
+        
+        public override int Presicion { get; } = 100;
     }
 }

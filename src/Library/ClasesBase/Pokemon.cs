@@ -17,6 +17,10 @@ namespace Library.ClasesBase
         public List<Movimiento> Movimientos { get; set; }
         public List<ETipos> Tipo { get; set; }
         public bool Debil { get; set; }
+        
+        public int Velocidad { get; set; }
+        
+        public int Evasion { get; set; }
 
         public void RecibirDanio(int danio)
         {

@@ -1,25 +1,16 @@
 ﻿using Library.Enums;
-using Library.Interfaces;
+using Library.ClasesBase;
 
-namespace Library.Movimientos.Roca;
-
-public class Pedrada: IMovimiento
+namespace Library.Movimientos.Roca
 {
-    public ETipos Tipo { get; } = ETipos.ROCA;
-        
-    public string Nombre { get; } = "Pedrada";
-        
-    public int Daño { get; } = 45;
-        
-    public int PP { get; } = 25;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = false;
-
-
-    public Pedrada()
+    public class Pedrada : Movimiento
     {
-        CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
+        public override ETipos Tipo { get; } = ETipos.ROCA;
+        public override string Nombre { get; } = "Pedrada";
+        public override int Daño { get; } = 45;
+        public override int PP { get; } = 8;
+        public override bool Especial { get; } = false;
+        
+        public override int Presicion { get; } = 95;
     }
 }

@@ -1,61 +1,39 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Library.Enums;
-using Library.Interfaces;
-using Library.Movimientos.Bicho;
-using Library.Movimientos.Normal;
-using Library.Movimientos.Psiquico;
+using Library.ClasesBase;
+using Library.Movimientos.Dragon;
+using Library.Movimientos.Lucha;
 
-namespace Library.Pokemones;
-
-public class Lucario : IPokemon
+namespace Library.Pokemones
 {
-    public string Nombre { get; set; }
-    public int SaludTotal { get; set; }
-    public int SaludActual { get; set; }
-    public int ValorAtaque { get; set; }
-    public int ValorDefensa { get; set; }
-    public int ValorAtaqueEspecial { get; set; }
-    public int ValorDefensaEspecial { get; set; }
-    public List<IMovimiento> Movimientos { get; set; }
-    public List<ETipos> Tipo { get; set; }
-
-
-    public Lucario()
+    public class Lucario : Pokemon
     {
-        Nombre = "Lucario";
-
-        SaludTotal = 132;
-        SaludActual = SaludTotal;
-
-        ValorAtaque = 58;
-        ValorDefensa = 44;
-        ValorAtaqueEspecial = 61;
-        ValorDefensaEspecial = 52;
-        Debil = false;
-
-        Movimientos = new List<IMovimiento> { new Zumbido(), new Placaje(), new TijeraX(), new Psicoonda() };
-        Tipo = new List<ETipos> { ETipos.LUCHA, ETipos.ACERO };
-    }
-
-    public void RecibirDanio(int danio)
-    {
-        SaludActual = Math.Max(SaludActual - danio, 0);
-        if (SaludActual <= 0)
+        public Lucario()
         {
-            Debil = true;
+            Nombre = "Lucario";
+            SaludTotal = 136;
+            SaludActual = SaludTotal;
+            ValorAtaque = 60;
+            ValorDefensa = 45;
+            ValorAtaqueEspecial = 60;
+            ValorDefensaEspecial = 42;
+            Velocidad = 108;
+            Evasion = 20;
+            Debil = false;
+
+            
+            Movimientos = new List<Movimiento>
+            {
+                new PuñoCertero(),
+                new PuñoIncremento(),
+                new PulsoDragon(),
+                new EsferaAural()
+            };
+
+            Tipo = new List<ETipos>
+            {
+                ETipos.LUCHA, 
+            };
         }
-    }
-
-    public bool Debil { get; set; }
-
-    public void UsarMovimiento(IMovimiento movimiento)
-    {
-        IMovimiento MovimientoUtilizado = Movimientos.Find(f => f == movimiento);
-
-        if (MovimientoUtilizado != null)
-        {
-            MovimientoUtilizado.CurrentPP -= 1;
-        } // Restamos 1 PP, ya que al usarlo se gasta.
     }
 }

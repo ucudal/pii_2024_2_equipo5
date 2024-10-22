@@ -11,6 +11,7 @@ namespace Library.ClasesBase
         public abstract int PP { get; }
         public int CurrentPP { get; set; }
         public abstract bool Especial { get; }
+        public abstract int Presicion { get; }
 
         protected Movimiento()
         {

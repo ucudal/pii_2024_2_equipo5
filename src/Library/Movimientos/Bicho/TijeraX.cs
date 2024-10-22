@@ -10,5 +10,7 @@ namespace Library.Movimientos.Bicho
         public override int Daño { get; } = 80;
         public override int PP { get; } = 6;
         public override bool Especial { get; } = false;
+        
+        public override int Presicion { get; } = 100;
     }
 }
