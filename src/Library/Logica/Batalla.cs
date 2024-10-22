@@ -84,6 +84,30 @@ public class Batalla
         // Busca el movimiento que el atacante desea usar
         IMovimiento ataque = ObtenerMovimiento(entrenadorAtacante, movimiento);
 
+        if (entrenadorAtacante.PokemonActivo.Estado == EEstado.PARALIZADO)
+        {
+            Random rand = new Random();
+            bool puedeAtacar = rand.NextDouble() >= 0.25; // 25% de probabilidad de no poder atacar
+
+            if (!puedeAtacar)
+            {
+                return; // El ataque falla y el turno termina 
+            }
+        }
+        else if (entrenadorAtacante.PokemonActivo.Estado == EEstado.DORMIDO)
+        {
+            if (entrenadorAtacante.PokemonActivo.TurnosDormido > 0)
+            {
+                //caso está dormido y no puede atacar
+                //entrenadorAtacante.PokemonActivo.TurnosDormido--; NO LO REDUZCO ACA PORQUE SE REDUCE CUANDO ACTUALIZO EN aplicar efectosestados
+                return; // El ataque falla y el turno termina
+            }
+            else
+            { 
+                // Está despierto
+            }
+        }
+
         ActualizarContadoresEntrenador(entrenadorAtacante, ataque); // Actualiza los contadores del entrenador
         AplicarDanio(ataque, entrenadorDefensor); // Aplica el daño al defensor
         if (ataque is MovimientoEspecial movimientoEspecial)
@@ -147,26 +171,29 @@ public class Batalla
         {
             int danioVeneno = (int)(pokemonActivo.SaludTotal * 0.05);
             pokemonActivo.RecibirDanio(danioVeneno);
-            Console.WriteLine($"{pokemonActivo.Nombre} sufre {danioVeneno} de daño por envenenamiento.");
+            
         }
         else if (pokemonActivo.Estado == EEstado.QUEMADO)
         {
             int danioQuemadura = (int)(pokemonActivo.SaludTotal * 0.10);
             pokemonActivo.RecibirDanio(danioQuemadura);
-            Console.WriteLine($"{pokemonActivo.Nombre} sufre {danioQuemadura} de daño por quemaduras.");
         }
-        else if (pokemonActivo.Estado == EEstado.NORMAL)
+        else if (pokemonActivo.Estado == EEstado.DORMIDO)
         {
             if (pokemonActivo.TurnosDormido > 0)
             {
                 pokemonActivo.TurnosDormido--;
-                Console.WriteLine($"{pokemonActivo.Nombre} sigue dormido.");
+                //El pokemon sigue dormido pero se resta 1 a la cantidad de turnos dormido restantes
             }
             else
             {
                 pokemonActivo.Estado = EEstado.NORMAL;
-                Console.WriteLine($"{pokemonActivo.Nombre} se ha despertado.");
+                //"Despierta" al pokemon, entonces pasa a estar normal
             }
+        }
+        else if (pokemonActivo.Estado == EEstado.PARALIZADO)
+        {
+            // No se aplica acá, se aplica en batalla
         }
     }
 

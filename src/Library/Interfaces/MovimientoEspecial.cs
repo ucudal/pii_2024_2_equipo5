@@ -66,7 +66,8 @@ public class MovimientoEspecial: IMovimiento
         Random rand = new Random();
         bool acierto = rand.NextDouble() <= Precision; // se compara el número aleatorio generado con la precisión del ataque.
                                                        // Si el número aleatorio es menor o igual a la precisión,
-                                                       // se considera que el ataque fue exitoso (acierto). 
+                                                       // se considera que el ataque fue exitoso (acierto). NO ESTOY MUY SEGURA DE SI
+                                                       // QUEDA EXACTAMENTE CÓMO PIDE EN LA LETRA
 
         if (acierto && victima.Estado == EEstado.NORMAL) // Sólo aplica si el Pokémon está en estado normal
         {
