@@ -3,24 +3,16 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Normal;
 
-public class AtaqueRapido: IMovimiento
+public class AtaqueRapido: MovimientoSimple
 {
-    public ETipos Tipo { get; } = ETipos.NORMAL;
-        
-    public string Nombre { get; } = "Ataque Rapido";
-        
-    public int Daño { get; } = 20;
-        
-    public int PP { get; } = 20;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = false;
-
-
     public AtaqueRapido()
     {
-        CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
+        Tipo = ETipos.NORMAL;
+        Nombre = "Ataque Rapido";
+        Daño = 20;
+        PP = 20;
+        Precision = 100;
+        CurrentPP = PP; // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }
 
 }

@@ -3,23 +3,15 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Hada;
 
-public class FuerzaLunar: IMovimiento
+public class FuerzaLunar: MovimientoEspecial
 {
-    public ETipos Tipo { get; } = ETipos.HADA;
-        
-    public string Nombre { get; } = "Fuerza Lunar";
-        
-    public int Daño { get; } = 50;
-        
-    public int PP { get; } = 4;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = true;
-
-
     public FuerzaLunar()
     {
+        Tipo = ETipos.HADA;
+        Nombre = "Fuerza Lunar";
+        Daño = 50;
+        Precision = 100;
+        //los PP los hereda ya que para los especiales siempre es 4
         CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }
 

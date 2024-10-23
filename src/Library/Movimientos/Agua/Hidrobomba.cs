@@ -3,23 +3,16 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Agua;
 
-public class Hidrobomba : IMovimiento
+public class Hidrobomba : MovimientoEspecial
 {
-    public ETipos Tipo { get; } = ETipos.AGUA;
-        
-    public string Nombre { get; } = "Hidrobomba";
-        
-    public int Daño { get; } = 50;
-        
-    public int PP { get; } = 4;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = true;
-
-
     public Hidrobomba()
     {
+        Tipo = ETipos.AGUA;
+        Nombre = "Hidrobomba";
+        Daño = 50;
+        Precision = 80;
+        //los PP los hereda ya que para los especiales siempre es 4
         CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }
+   
 }

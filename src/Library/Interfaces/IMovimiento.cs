@@ -9,4 +9,6 @@ public interface IMovimiento
     int PP { get; }        // PP = PowerPoints.
     int CurrentPP { get; set; }  // ._.
     bool Especial { get; }
+    double Precision{ get; }
+    public bool esPreciso(IPokemon victima);
 }

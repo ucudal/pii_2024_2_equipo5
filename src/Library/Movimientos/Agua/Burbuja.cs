@@ -3,23 +3,15 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Agua;
 
-public class Burbuja: IMovimiento
+public class Burbuja: MovimientoEspecial
 {
-    public ETipos Tipo { get; } = ETipos.AGUA;
-
-    public string Nombre { get; } = "Burbuja";
-        
-    public int Daño { get; } = 20;
-        
-    public int PP { get; } = 15;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = true;
-
-
     public Burbuja()
     {
+        Tipo = ETipos.AGUA;
+        Nombre = "Burbuja";
+        Daño = 20;
+        Precision = 100;
+        //los PP los hereda ya que para los especiales siempre es 4
         CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }
 

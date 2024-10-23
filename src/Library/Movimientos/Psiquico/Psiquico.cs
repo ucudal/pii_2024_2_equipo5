@@ -3,23 +3,15 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Psiquico;
 
-public class Psiquico : IMovimiento
+public class Psiquico : MovimientoEspecial
 {
-    public ETipos Tipo { get; } = ETipos.PSIQUICO;
-        
-    public string Nombre { get; } = "Psiquico";
-        
-    public int Daño { get; } = 45;
-        
-    public int PP { get; } = 4;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = true;
-
-
     public Psiquico()
     {
+        Tipo = ETipos.PSIQUICO;
+        Nombre = "Psiquico";
+        Daño = 45;
+        Precision = 100;
+        //los PP los hereda ya que para los especiales siempre es 4
         CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }
 }

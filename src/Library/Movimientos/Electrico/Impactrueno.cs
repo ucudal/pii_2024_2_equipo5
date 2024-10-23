@@ -3,24 +3,15 @@ using Library.Interfaces;
 
 namespace Library.Movimientos.Electrico;
 
-public class Impactrueno: IMovimiento
+public class Impactrueno: MovimientoEspecial
 {
-    public ETipos Tipo { get; } = ETipos.ELECTRICO;
-        
-    public string Nombre { get; } = "Impactrueno";
-        
-    public int Daño { get; } = 25;
-        
-    public int PP { get; } = 4;
-        
-    public int CurrentPP { get; set; }
-        
-    public bool Especial { get; } = true;
-
-
     public Impactrueno()
     {
+        Tipo = ETipos.ELECTRICO;
+        Nombre = "Impactrueno";
+        Daño = 25;
+        Precision = 100;
+        //los PP los hereda ya que para los especiales siempre es 4
         CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }
-
 }

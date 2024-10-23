@@ -1,3 +1,4 @@
+using Library.Enums;
 using Library.Interfaces;
 
 namespace Library.Logica;
@@ -82,9 +83,38 @@ public class Batalla
         Entrenador entrenadorDefensor = ObtenerEntrenadorDefensor(entrenadorAtacante);
         // Busca el movimiento que el atacante desea usar
         IMovimiento ataque = ObtenerMovimiento(entrenadorAtacante, movimiento);
-
         ActualizarContadoresEntrenador(entrenadorAtacante, ataque); // Actualiza los contadores del entrenador
+        if (entrenadorAtacante.PokemonActivo.Estado == EEstado.PARALIZADO)
+        {
+            Random rand = new Random();
+            bool puedeAtacar = rand.NextDouble() >= 0.25; // 25% de probabilidad de no poder atacar
+
+            if (!puedeAtacar)
+            {
+                return; // El ataque falla y el turno termina 
+            }
+        }
+        else if (entrenadorAtacante.PokemonActivo.Estado == EEstado.DORMIDO)
+        {
+            if (entrenadorAtacante.PokemonActivo.TurnosDormido > 0)
+            {
+                //caso está dormido y no puede atacar
+                //entrenadorAtacante.PokemonActivo.TurnosDormido--; NO LO REDUZCO ACA PORQUE SE REDUCE CUANDO ACTUALIZO EN aplicar efectosestados
+                return; // El ataque falla y el turno termina
+            }
+        }
+
+        if (!(ataque.esPreciso(entrenadorDefensor.PokemonActivo)))
+        {
+           return;
+        }
+        
         AplicarDanio(ataque, entrenadorDefensor); // Aplica el daño al defensor
+        if (ataque is MovimientoEspecial)
+        {
+            AplicarEfectosEstados(entrenadorDefensor);
+        } 
+        
     }
 
     public void SeleccionarPokemones(Entrenador entrenador, int cantidadPokemones)
@@ -102,8 +132,6 @@ public class Batalla
             entrenador.AgregarPokemon(nuevoPokemon); // Agrega el Pokémon al entrenador
             pokemonsDisponibles.Remove(nuevoPokemon); // Lo elimina de la lista de disponibles
         }
-
-        Console.Clear(); // Limpia la consola
     }
 
     public Entrenador ObtenerEntrenadorActual()
@@ -129,6 +157,35 @@ public class Batalla
     {
         ContadorTurno++; // Incrementa el contador de turnos
         EntrenadorActual = ObtenerEntrenadorActual(); // Actualiza el entrenador actual
+    }
+    private void AplicarEfectosEstados(Entrenador entrenador)
+    {
+        IPokemon pokemonActivo = entrenador.PokemonActivo;
+
+        if (pokemonActivo.Estado == EEstado.ENVENENADO)
+        {
+            int danioVeneno = (int)(pokemonActivo.SaludTotal * 0.05);
+            pokemonActivo.RecibirDanio(danioVeneno);
+            
+        }
+        else if (pokemonActivo.Estado == EEstado.QUEMADO)
+        {
+            int danioQuemadura = (int)(pokemonActivo.SaludTotal * 0.10);
+            pokemonActivo.RecibirDanio(danioQuemadura);
+        }
+        else if (pokemonActivo.Estado == EEstado.DORMIDO)
+        {
+            if (pokemonActivo.TurnosDormido > 0)
+            {
+                pokemonActivo.TurnosDormido--;
+                //El pokemon sigue dormido pero se resta 1 a la cantidad de turnos dormido restantes
+            }
+            else
+            {
+                pokemonActivo.Estado = EEstado.NORMAL;
+                //"Despierta" al pokemon, entonces pasa a estar normal
+            }
+        }
     }
 
     public bool Fin()
