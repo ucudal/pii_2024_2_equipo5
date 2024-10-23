@@ -1,3 +1,5 @@
+using Library.Enums;
+
 namespace Library.Interfaces;
 
 public class CuraTotal : IItems
@@ -6,6 +8,6 @@ public class CuraTotal : IItems
 
     public void Usar(IPokemon pokemon)
     {
-        pokemon.Estado = EEstado.Normal;
+        pokemon.Estado = EEstado.NORMAL;
     }
 }
