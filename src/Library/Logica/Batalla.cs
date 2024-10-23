@@ -135,8 +135,6 @@ public class Batalla
             entrenador.AgregarPokemon(nuevoPokemon); // Agrega el Pokémon al entrenador
             pokemonsDisponibles.Remove(nuevoPokemon); // Lo elimina de la lista de disponibles
         }
-
-        Console.Clear(); // Limpia la consola
     }
 
     public Entrenador ObtenerEntrenadorActual()
