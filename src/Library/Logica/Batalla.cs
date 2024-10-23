@@ -137,6 +137,13 @@ public class Batalla
         return Entrenador1.Pokemons.Count == 0 || Entrenador2.Pokemons.Count == 0;
     }
 
+    public void UsarItem(IItems item, Entrenador entrenador)
+    {
+        item.Usar(entrenador.PokemonActivo);
+        entrenadorActual.RemoverItem(item);
+        SiguienteTurno();
+    }
+
     // Métodos privados
     private void InicializarPokemones()
     {
