@@ -10,7 +10,7 @@ namespace Library.Logica
         private List<IPokemon> pokemons = new List<IPokemon>();
         private IPokemon pokemonActivo;
         private int contadorEspecial = 0;
-        private List<IItems> items; 
+        private List<IItems> items = new List<IItems>();
 
         // Getters y Setters públicos
         public string Nombre
@@ -37,10 +37,13 @@ namespace Library.Logica
             set => contadorEspecial = value;
         }
 
+        public List<IItems> Items => items;
+
         // Constructor que inicializa el nombre del entrenador y otras propiedades.
         public Entrenador(string nombre)
         {
             this.nombre = nombre;
+            InicializarItems(); // Asignar ítems iniciales
         }
 
         // Método para obtener el estado de todos los Pokémon del entrenador.
@@ -126,6 +129,22 @@ namespace Library.Logica
         public void ClearPokemons()
         {
             pokemons.Clear();
+        }
+
+        private void InicializarItems()
+        {
+            Items.Add(new SuperPocion() { Nombre = "SuperPocion" });
+            Items.Add(new SuperPocion() { Nombre = "SuperPocion" });
+            Items.Add(new SuperPocion() { Nombre = "SuperPocion" });
+            Items.Add(new SuperPocion() { Nombre = "SuperPocion" });
+            Items.Add(new Revivir() { Nombre = "Revivir" });
+            Items.Add(new CuraTotal() { Nombre = "CuraTotal" });
+            Items.Add(new CuraTotal() { Nombre = "CuraTotal" });
+        }
+
+        public void RemoverItem(IItems item)
+        {
+            Items.Remove(item);
         }
     }
 }

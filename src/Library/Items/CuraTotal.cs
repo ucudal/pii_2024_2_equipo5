@@ -6,6 +6,6 @@ public class CuraTotal : IItems
 
     public void Usar(IPokemon pokemon)
     {
-        //TODO: Cuando se implemente el metodo CurarEfectoEspecial hacer esta implementación
+        pokemon.Estado = EEstado.Normal;
     }
 }
