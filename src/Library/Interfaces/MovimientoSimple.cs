@@ -15,6 +15,7 @@ public class MovimientoSimple: IMovimiento
     public double Precision
     {
         get => precision;
+        set => precision = value;
     }
 
     public bool Especial

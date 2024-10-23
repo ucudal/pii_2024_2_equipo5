@@ -10,6 +10,7 @@ public class TijeraX: MovimientoSimple
         Tipo = ETipos.BICHO;
         Nombre = "TijeraX";
         Daño = 35;
+        Precision = 100;
         PP = 10;
         CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }

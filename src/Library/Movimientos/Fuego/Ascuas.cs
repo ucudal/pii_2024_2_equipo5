@@ -1,3 +1,4 @@
+using System.Security.Cryptography;
 using Library.Enums;
 using Library.Interfaces;
 
@@ -11,6 +12,7 @@ public class Ascuas: MovimientoSimple
         Nombre  = "Ascuas";
         Daño = 25;
         PP = 20;
+        Precision = 100;
         CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }
 }

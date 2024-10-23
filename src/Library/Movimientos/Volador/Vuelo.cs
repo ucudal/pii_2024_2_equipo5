@@ -11,6 +11,7 @@ public class Vuelo: MovimientoSimple
         Nombre = "Vuelo";
         Daño = 45;
         PP = 5;
+        Precision = 95;
         CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }
 

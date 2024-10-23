@@ -83,7 +83,7 @@ public class Batalla
         Entrenador entrenadorDefensor = ObtenerEntrenadorDefensor(entrenadorAtacante);
         // Busca el movimiento que el atacante desea usar
         IMovimiento ataque = ObtenerMovimiento(entrenadorAtacante, movimiento);
-
+        ActualizarContadoresEntrenador(entrenadorAtacante, ataque); // Actualiza los contadores del entrenador
         if (entrenadorAtacante.PokemonActivo.Estado == EEstado.PARALIZADO)
         {
             Random rand = new Random();
@@ -102,22 +102,19 @@ public class Batalla
                 //entrenadorAtacante.PokemonActivo.TurnosDormido--; NO LO REDUZCO ACA PORQUE SE REDUCE CUANDO ACTUALIZO EN aplicar efectosestados
                 return; // El ataque falla y el turno termina
             }
-            else
-            { 
-                // Está despierto
-            }
         }
 
-        ActualizarContadoresEntrenador(entrenadorAtacante, ataque); // Actualiza los contadores del entrenador
-        AplicarDanio(ataque, entrenadorDefensor); // Aplica el daño al defensor
-        if (ataque is MovimientoEspecial movimientoEspecial)
+        if (!(ataque.esPreciso(entrenadorDefensor.PokemonActivo)))
         {
-            if (movimientoEspecial.esPreciso(entrenadorDefensor.PokemonActivo))
-            {
-                Console.WriteLine($"{entrenadorDefensor.PokemonActivo.Nombre} ha sido afectado por {movimientoEspecial.Efecto}.");
-            }
+           return;
         }
-
+        
+        AplicarDanio(ataque, entrenadorDefensor); // Aplica el daño al defensor
+        if (ataque is MovimientoEspecial)
+        {
+            AplicarEfectosEstados(entrenadorDefensor);
+        } 
+        
     }
 
     public void SeleccionarPokemones(Entrenador entrenador, int cantidadPokemones)
@@ -188,10 +185,6 @@ public class Batalla
                 pokemonActivo.Estado = EEstado.NORMAL;
                 //"Despierta" al pokemon, entonces pasa a estar normal
             }
-        }
-        else if (pokemonActivo.Estado == EEstado.PARALIZADO)
-        {
-            // No se aplica acá, se aplica en atacar
         }
     }
 

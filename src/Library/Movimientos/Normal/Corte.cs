@@ -11,6 +11,7 @@ public class Corte: MovimientoSimple
         Nombre = "Corte";
         Daño = 18;
         PP = 25;
+        Precision = 100;
         CurrentPP = PP; // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }
 }

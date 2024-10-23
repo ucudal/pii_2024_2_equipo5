@@ -11,6 +11,7 @@ public class BolaVoltio: MovimientoSimple
         Nombre = "Bola Voltio";
         Daño = 40;
         PP = 10;
+        Precision = 95;
         CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }
 }

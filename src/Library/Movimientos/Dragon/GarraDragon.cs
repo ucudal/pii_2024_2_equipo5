@@ -11,6 +11,7 @@ public class GarraDragon : MovimientoSimple
         Nombre = "Garra Dragon";
         Daño = 45;
         PP = 10;
+        Precision = 100;
         CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }
 }

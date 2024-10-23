@@ -11,7 +11,8 @@ public class AtaqueRapido: MovimientoSimple
         Nombre = "Ataque Rapido";
         Daño = 20;
         PP = 20;
-        CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
+        Precision = 100;
+        CurrentPP = PP; // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }
 
 }

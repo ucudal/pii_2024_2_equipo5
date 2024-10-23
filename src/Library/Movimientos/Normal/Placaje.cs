@@ -11,6 +11,7 @@ public class Placaje: MovimientoSimple
         Nombre = "Placaje";
         Daño = 25;
         PP = 15;
+        Precision = 100;
         CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }
 

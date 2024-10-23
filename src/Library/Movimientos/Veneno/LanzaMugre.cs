@@ -11,6 +11,7 @@ public class LanzaMugre: MovimientoSimple
         Nombre = "Lanza Mugre";
         Daño = 45;
         PP = 5;
+        Precision = 85;
         CurrentPP = PP;            // Esto es para inicializar la cantidad veces que podes usar un movimiento.
     }  
 }
