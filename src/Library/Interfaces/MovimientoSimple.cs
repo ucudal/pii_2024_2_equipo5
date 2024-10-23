@@ -10,6 +10,12 @@ public class MovimientoSimple: IMovimiento
     protected int pP;
     protected int currentPP;
     protected bool especial = false;
+    protected double precision;
+
+    public double Precision
+    {
+        get => precision;
+    }
 
     public bool Especial
     {
@@ -45,7 +51,15 @@ public class MovimientoSimple: IMovimiento
         get => currentPP;
         set => currentPP = value;
     }
-    
-    
-    
+
+    public bool esPreciso(IPokemon victima)
+    {
+        // Lanza un número aleatorio para determinar si aplica el efecto
+        Random rand = new Random();
+        bool acierto = rand.NextDouble() <= Precision; // se compara el número aleatorio generado con la precisión del ataque.
+        // Si el número aleatorio es menor o igual a la precisión,
+        // se considera que el ataque fue exitoso (acierto). NO ESTOY MUY SEGURA DE SI
+        // QUEDA EXACTAMENTE CÓMO PIDE EN LA LETRA
+        return acierto;
+    }
 }

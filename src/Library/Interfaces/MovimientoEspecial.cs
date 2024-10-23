@@ -25,6 +25,7 @@ public class MovimientoEspecial: IMovimiento
         set => precision = value;
     }
 
+    
     public bool Especial
     {
         get => especial;
@@ -60,7 +61,7 @@ public class MovimientoEspecial: IMovimiento
         set => currentPP = value;
     }
     
-    public bool AplicarEfecto(IPokemon victima)
+    public bool esPreciso(IPokemon victima)
     {
         // Lanza un número aleatorio para determinar si aplica el efecto
         Random rand = new Random();

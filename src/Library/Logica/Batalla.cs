@@ -112,7 +112,7 @@ public class Batalla
         AplicarDanio(ataque, entrenadorDefensor); // Aplica el daño al defensor
         if (ataque is MovimientoEspecial movimientoEspecial)
         {
-            if (movimientoEspecial.AplicarEfecto(entrenadorDefensor.PokemonActivo))
+            if (movimientoEspecial.esPreciso(entrenadorDefensor.PokemonActivo))
             {
                 Console.WriteLine($"{entrenadorDefensor.PokemonActivo.Nombre} ha sido afectado por {movimientoEspecial.Efecto}.");
             }
@@ -193,7 +193,7 @@ public class Batalla
         }
         else if (pokemonActivo.Estado == EEstado.PARALIZADO)
         {
-            // No se aplica acá, se aplica en batalla
+            // No se aplica acá, se aplica en atacar
         }
     }
 
