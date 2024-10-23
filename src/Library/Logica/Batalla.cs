@@ -245,6 +245,10 @@ public class Batalla
                                     Efectividad.ObtenerEfectividad(ataque.Tipo,
                                         entrenadorDefensor.PokemonActivo.Tipo[0]));
 
+        // Si es critico, aumenta un 20% el daño causado (Hay un 10% de probabilidad)
+        if (esCritico())
+        { danio = (int)(danio * 1.2); }
+
         entrenadorDefensor.PokemonActivo.RecibirDanio(danio); // Aplica el daño al Pokémon defensor
         InformarDanio(ataque, entrenadorDefensor, danio); // Informa sobre el daño
         VerificarDebilidad(entrenadorDefensor,
@@ -291,5 +295,14 @@ public class Batalla
         {
             entrenadorAtacante.ContadorEspecial -= 1; // Reduce el contador si el ataque especial no está disponible
         }
+    }
+    
+    private bool esCritico()
+    {
+        Random rand = new Random(); 
+        bool critico = rand.Next(1, 101) <= 10; // Genera un número aleatorio entre 1 y 100 
+        // si el número generado está dentro del rango de 1 a 10
+        // retorna que el ataque es crítico. (Hay un 10% de probabilidades de que sea crítico)
+        return critico;
     }
 }
