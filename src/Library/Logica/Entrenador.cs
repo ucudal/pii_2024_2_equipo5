@@ -10,6 +10,7 @@ namespace Library.Logica
         private List<IPokemon> pokemons = new List<IPokemon>();
         private IPokemon pokemonActivo;
         private int contadorEspecial = 0;
+        private List<IItems> items; 
 
         // Getters y Setters públicos
         public string Nombre
